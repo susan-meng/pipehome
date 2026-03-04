@@ -1,0 +1,383 @@
+name: Vega CI - Stage 3 (AI Agents)
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# 同一分支新 push 取消未完成的 run
+concurrency:
+  group: vega-ci-agents-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ========== Stage 3.1: 提交监听 ==========
+  commit-listener:
+    runs-on: ubuntu-latest
+    outputs:
+      scopes: ${{ steps.analyze.outputs.scopes }}
+      affected_apis: ${{ steps.analyze.outputs.affected_apis }}
+      has_changes: ${{ steps.analyze.outputs.has_changes }}
+      need_cases: ${{ steps.analyze.outputs.need_cases }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install pyyaml
+      
+      - name: Run Commit Listener
+        id: analyze
+        run: |
+          cd at-framework
+          python scripts/commit_listener.py \
+            --repo-path .. \
+            --mapping testcase/vega/_config/path_scope_mapping.yaml \
+            --apis testcase/vega/_config/apis.yaml \
+            --output listener_output.json
+          
+          # 输出到 GitHub Actions
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+          echo "scopes=$(cat listener_output.json | jq -r '.scopes | join(",")')" >> $GITHUB_OUTPUT
+          echo "affected_apis=$(cat listener_output.json | jq -r '.affected_api_names | join(",")')" >> $GITHUB_OUTPUT
+          echo "need_cases=$(cat listener_output.json | jq -r '.need_add_cases')" >> $GITHUB_OUTPUT
+      
+      - name: Upload listener output
+        uses: actions/upload-artifact@v4
+        with:
+          name: listener-output-${{ github.run_id }}
+          path: at-framework/listener_output.json
+
+  # ========== Stage 3.2: 智能体 A - 用例维护 ==========
+  agent-a-maintenance:
+    needs: commit-listener
+    if: needs.commit-listener.outputs.has_changes == 'true' && needs.commit-listener.outputs.need_cases == 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      generated_count: ${{ steps.agent-a.outputs.generated_count }}
+    steps:
+      - name: Checkout test framework
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          path: dip-at
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          cd dip-at/at-framework
+          pip install pyyaml
+      
+      - name: Download listener output
+        uses: actions/download-artifact@v4
+        with:
+          name: listener-output-${{ github.run_id }}
+          path: dip-at/at-framework
+      
+      - name: Run Agent A - Case Maintenance
+        id: agent-a
+        run: |
+          cd dip-at/at-framework
+          
+          python scripts/agent_a_maintenance.py \
+            --listener-output listener_output.json \
+            --base-dir testcase/vega \
+            --apis-config testcase/vega/_config/apis.yaml \
+            --output auto_generated_cases.yaml
+          
+          # 检查是否生成了用例
+          if [ -f auto_generated_cases.yaml ]; then
+            COUNT=$(grep -c "name:" auto_generated_cases.yaml || echo "0")
+            echo "generated_count=$COUNT" >> $GITHUB_OUTPUT
+            echo "✅ 智能体 A 生成了 $COUNT 条用例"
+          else
+            echo "generated_count=0" >> $GITHUB_OUTPUT
+            echo "ℹ️ 智能体 A 未生成新用例"
+          fi
+      
+      - name: Upload generated cases
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-a-generated-${{ github.run_id }}
+          path: dip-at/at-framework/auto_generated_cases.yaml
+
+  # ========== Stage 3.3: 智能体 B - 维度分析 ==========
+  agent-b-dimension:
+    needs: commit-listener
+    if: needs.commit-listener.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      dimensions: ${{ steps.agent-b.outputs.dimensions }}
+    steps:
+      - name: Checkout test framework
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          path: dip-at
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install pyyaml
+      
+      - name: Download listener output
+        uses: actions/download-artifact@v4
+        with:
+          name: listener-output-${{ github.run_id }}
+          path: dip-at/at-framework
+      
+      - name: Run Agent B - Dimension Analysis
+        id: agent-b
+        run: |
+          cd dip-at/at-framework
+          
+          python scripts/agent_b_dimension.py \
+            --listener-output listener_output.json \
+            --mapping testcase/vega/_config/path_scope_mapping.yaml \
+            --output dimension_analysis.json
+          
+          # 输出维度
+          DIMENSIONS=$(cat dimension_analysis.json | jq -r '.dimensions | join(",")')
+          echo "dimensions=$DIMENSIONS" >> $GITHUB_OUTPUT
+          echo "✅ 智能体 B 识别了测试维度: $DIMENSIONS"
+      
+      - name: Upload dimension analysis
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-b-dimension-${{ github.run_id }}
+          path: dip-at/at-framework/dimension_analysis.json
+
+  # ========== Stage 3.4: 智能体 C - 用例筛选 ==========
+  agent-c-selector:
+    needs: [commit-listener, agent-b-dimension]
+    if: needs.commit-listener.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      total_cases: ${{ steps.agent-c.outputs.total_cases }}
+      batch_info: ${{ steps.agent-c.outputs.batch_info }}
+    steps:
+      - name: Checkout test framework
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          path: dip-at
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install pyyaml
+      
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dip-at/at-framework
+          pattern: '*-${{ github.run_id }}'
+      
+      - name: Organize artifacts
+        run: |
+          cd dip-at/at-framework
+          # 移动文件到正确位置
+          find . -name "listener_output.json" -exec cp {} . \; 2>/dev/null || true
+          find . -name "dimension_analysis.json" -exec cp {} . \; 2>/dev/null || true
+      
+      - name: Run Agent C - Case Selector
+        id: agent-c
+        run: |
+          cd dip-at/at-framework
+          
+          python scripts/agent_c_selector.py \
+            --listener-output listener_output.json \
+            --dimension-analysis dimension_analysis.json \
+            --base-dir testcase/vega \
+            --output execution_plan.json
+          
+          # 输出统计
+          TOTAL=$(cat execution_plan.json | jq -r '.total_cases')
+          BATCHES=$(cat execution_plan.json | jq -r '.batches | length')
+          echo "total_cases=$TOTAL" >> $GITHUB_OUTPUT
+          echo "batch_info=$BATCHES batches" >> $GITHUB_OUTPUT
+          echo "✅ 智能体 C 创建了 $BATCHES 个执行批次，共 $TOTAL 条用例"
+      
+      - name: Upload execution plan
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-c-plan-${{ github.run_id }}
+          path: dip-at/at-framework/execution_plan.json
+
+  # ========== Stage 3.5: 执行测试 ==========
+  run-tests:
+    needs: [agent-c-selector]
+    if: needs.agent-c-selector.outputs.total_cases != '0'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout test framework
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          path: dip-at
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          cd dip-at/at-framework
+          pip install -r requirement.txt
+      
+      - name: Download execution plan
+        uses: actions/download-artifact@v4
+        with:
+          name: agent-c-plan-${{ github.run_id }}
+          path: dip-at/at-framework
+      
+      - name: Configure test environment
+        env:
+          TEST_HOST: ${{ secrets.VEGA_TEST_HOST }}
+          TEST_TOKEN: ${{ secrets.VEGA_TEST_TOKEN }}
+        run: |
+          cd dip-at/at-framework
+          cat > config/config.ini << EOF
+          [env]
+          host = ${TEST_HOST:-10.4.111.209}
+          case_file = ./testcase/vega
+          clean_up = 0
+          clean_up_module = vega
+          
+          [external]
+          token = ${TEST_TOKEN:-your-test-token-here}
+          EOF
+      
+      - name: Execute tests
+        run: |
+          cd dip-at/at-framework
+          
+          # 按批次执行
+          echo "=== 执行测试 ==="
+          
+          # 获取所有 case_names
+          CASE_NAMES=$(cat execution_plan.json | jq -r '[.batches[].case_names] | add | join(",")')
+          
+          if [ -n "$CASE_NAMES" ]; then
+            echo "执行用例: ${CASE_NAMES:0:100}..."
+            export CASE_NAMES
+            python main.py
+          else
+            echo "没有要执行的用例"
+            exit 1
+          fi
+      
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ github.run_id }}
+          path: |
+            dip-at/at-framework/report/junit_report.xml
+            dip-at/at-framework/report/html
+
+  # ========== Stage 3.6: 智能体 D - 报告生成 ==========
+  agent-d-report:
+    needs: [run-tests, agent-c-selector, agent-b-dimension]
+    if: always() && needs.run-tests.result != 'skipped'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          pattern: '*-${{ github.run_id }}'
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Run Agent D - Report Generator
+        run: |
+          # 找到 junit_report.xml
+          JUNIT_FILE=$(find artifacts -name "junit_report.xml" | head -1)
+          PLAN_FILE=$(find artifacts -name "execution_plan.json" | head -1)
+          DIMENSION_FILE=$(find artifacts -name "dimension_analysis.json" | head -1)
+          
+          if [ -f "$JUNIT_FILE" ]; then
+            python3 << 'EOF'
+          import sys
+          sys.path.insert(0, 'dip-at/at-framework/scripts')
+          from agent_d_report import AgentD_ReportGenerator
+          
+          agent = AgentD_ReportGenerator()
+          report = agent.run(
+              junit_path="$JUNIT_FILE",
+              execution_plan_path="$PLAN_FILE" if "$PLAN_FILE" else None,
+              dimension_analysis_path="$DIMENSION_FILE" if "$DIMENSION_FILE" else None,
+              output_path="final_report.md"
+          )
+          EOF
+            
+            echo "✅ 智能体 D 生成了测试报告"
+          else
+            echo "⚠️ 未找到测试结果，生成简化报告"
+            echo "# 测试报告\n\n未找到测试结果文件。" > final_report.md
+          fi
+      
+      - name: Upload final report
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-report-${{ github.run_id }}
+          path: final_report.md
+      
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('final_report.md', 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: report
+            });
+
+  # ========== Stage 3.7: 汇总报告 ==========
+  summary:
+    needs: [commit-listener, agent-a-maintenance, agent-b-dimension, agent-c-selector, run-tests, agent-d-report]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate workflow summary
+        run: |
+          echo "## 🤖 Stage 3 智能体执行摘要" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| 智能体 | 状态 |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|------|" >> $GITHUB_STEP_SUMMARY
+          echo "| 提交监听 | ${{ needs.commit-listener.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 智能体 A (用例维护) | ${{ needs.agent-a-maintenance.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 智能体 B (维度分析) | ${{ needs.agent-b-dimension.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 智能体 C (用例筛选) | ${{ needs.agent-c-selector.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 测试执行 | ${{ needs.run-tests.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 智能体 D (报告生成) | ${{ needs.agent-d-report.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "查看详细报告: workflow artifacts" >> $GITHUB_STEP_SUMMARY
