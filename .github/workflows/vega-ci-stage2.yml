@@ -1,0 +1,344 @@
+name: Vega CI - Stage 2 (Smart Selection)
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# 同一分支新 push 取消未完成的 run
+concurrency:
+  group: vega-ci-smart-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ========== Stage 2.1: 提交监听（智能分析）==========
+  commit-listener:
+    runs-on: ubuntu-latest
+    outputs:
+      scopes: ${{ steps.analyze.outputs.scopes }}
+      need_cases: ${{ steps.analyze.outputs.need_cases }}
+      affected_apis: ${{ steps.analyze.outputs.affected_apis }}
+      case_filter_mode: ${{ steps.analyze.outputs.case_filter_mode }}
+      has_changes: ${{ steps.analyze.outputs.has_changes }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # 需要至少2个commit才能比较
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+      
+      - name: Run Commit Listener
+        id: analyze
+        run: |
+          cd at-framework
+          
+          # 运行提交监听脚本
+          python scripts/commit_listener.py \
+            --repo-path .. \
+            --mapping testcase/vega/_config/path_scope_mapping.yaml \
+            --apis testcase/vega/_config/apis.yaml \
+            --base-ref HEAD^ \
+            --head-ref HEAD \
+            --output listener_output.json
+          
+          # 显示输出
+          echo "=== Listener Output ==="
+          cat listener_output.json | python -m json.tool
+          
+          # 检查是否有变更
+          if [ -s listener_output.json ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Upload listener output
+        uses: actions/upload-artifact@v4
+        with:
+          name: listener-output-${{ github.run_id }}
+          path: at-framework/listener_output.json
+          retention-days: 7
+
+  # ========== Stage 2.2: 智能筛选用例 ==========
+  select-cases:
+    needs: commit-listener
+    if: needs.commit-listener.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      case_names: ${{ steps.select.outputs.case_names }}
+      batch_count: ${{ steps.select.outputs.batch_count }}
+      selection_summary: ${{ steps.select.outputs.selection_summary }}
+    steps:
+      - name: Checkout test framework
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          path: dip-at
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          cd dip-at/at-framework
+          pip install pyyaml
+      
+      - name: Download listener output
+        uses: actions/download-artifact@v4
+        with:
+          name: listener-output-${{ github.run_id }}
+          path: dip-at/at-framework
+      
+      - name: Smart Case Selection
+        id: select
+        run: |
+          cd dip-at/at-framework
+          
+          # 读取 listener_output.json
+          SCOPES='${{ needs.commit-listener.outputs.scopes }}'
+          AFFECTED_APIS='${{ needs.commit-listener.outputs.affected_apis }}'
+          FILTER_MODE='${{ needs.commit-listener.outputs.case_filter_mode }}'
+          
+          echo "=== Selection Parameters ==="
+          echo "Scopes: $SCOPES"
+          echo "Affected APIs: $AFFECTED_APIS"
+          echo "Filter Mode: $FILTER_MODE"
+          
+          # 策略1: 如果识别到具体 API，优先按 API 筛选
+          if [ -n "$AFFECTED_APIS" ] && [ "$FILTER_MODE" = "api" ]; then
+            echo ""
+            echo "🎯 策略: 按 API 名称筛选"
+            
+            # 逐个 API 提取用例
+            API_LIST=$(echo "$AFFECTED_APIS" | tr ',' '\n')
+            ALL_CASES=""
+            
+            for api in $API_LIST; do
+              echo "  提取 API: $api"
+              CASES=$(python scripts/extract_cases.py \
+                --base-dir testcase/vega \
+                --api-name "$api" \
+                --format json 2>/dev/null | jq -r '.cases[].name' 2>/dev/null | tr '\n' ',')
+              
+              if [ -n "$CASES" ]; then
+                ALL_CASES="${ALL_CASES}${CASES}"
+              fi
+            done
+            
+            # 去重
+            CASE_NAMES=$(echo "$ALL_CASES" | tr ',' '\n' | sort -u | grep -v '^$' | tr '\n' ',' | sed 's/,$//')
+          
+          # 策略2: 按 scope 筛选（回归测试）
+          elif [ -n "$SCOPES" ]; then
+            echo ""
+            echo "🎯 策略: 按 Scope 筛选"
+            
+            # 提取 scope 对应的 regression 用例
+            FIRST_SCOPE=$(echo "$SCOPES" | cut -d',' -f1)
+            echo "  使用 Scope: $FIRST_SCOPE"
+            
+            # 使用 extract_cases.py 按 scope 提取
+            # 注意：当前 extract_cases.py 可能不支持 --scope，这里用 TAGS 模拟
+            # 根据 scope 推断 tags
+            case "$FIRST_SCOPE" in
+              "vega-data-connection")
+                TAGS="regression,data-connection"
+                ;;
+              "vega-gateway")
+                TAGS="regression,smoke"
+                ;;
+              *)
+                TAGS="regression"
+                ;;
+            esac
+            
+            echo "  推断 Tags: $TAGS"
+            
+            # 这里简化处理：直接输出 tags，在测试步骤中使用
+            CASE_NAMES=""
+            echo "selection_summary=按 Scope '$FIRST_SCOPE' (Tags: $TAGS) 筛选" >> $GITHUB_OUTPUT
+          
+          # 策略3: 兜底 - 跑冒烟测试
+          else
+            echo ""
+            echo "🎯 策略: 兜底冒烟测试"
+            TAGS="smoke"
+            CASE_NAMES=""
+            echo "selection_summary=兜底冒烟测试 (TAGS=smoke)" >> $GITHUB_OUTPUT
+          fi
+          
+          # 输出结果
+          if [ -n "$CASE_NAMES" ]; then
+            echo "case_names=$CASE_NAMES" >> $GITHUB_OUTPUT
+            COUNT=$(echo "$CASE_NAMES" | tr ',' '\n' | wc -l)
+            echo "batch_count=$COUNT" >> $GITHUB_OUTPUT
+            echo "selection_summary=选中 $COUNT 条用例: ${CASE_NAMES:0:100}..." >> $GITHUB_OUTPUT
+            
+            echo ""
+            echo "=== Selected Cases ($COUNT) ==="
+            echo "$CASE_NAMES" | tr ',' '\n'
+          else
+            echo "case_names=" >> $GITHUB_OUTPUT
+            echo "batch_count=0" >> $GITHUB_OUTPUT
+            if [ -z "$selection_summary" ]; then
+              echo "selection_summary=使用 Tags 筛选模式" >> $GITHUB_OUTPUT
+            fi
+          fi
+      
+      - name: Print selection summary
+        run: |
+          echo "## 🎯 用例筛选结果" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Scopes:** ${{ needs.commit-listener.outputs.scopes }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Affected APIs:** ${{ needs.commit-listener.outputs.affected_apis }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Need New Cases:** ${{ needs.commit-listener.outputs.need_cases }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Selection:** ${{ steps.select.outputs.selection_summary }}" >> $GITHUB_STEP_SUMMARY
+
+  # ========== Stage 2.3: 执行测试 ==========
+  run-tests:
+    needs: [commit-listener, select-cases]
+    if: needs.select-cases.outputs.batch_count != '0' || needs.select-cases.outputs.case_names == ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout test framework
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          path: dip-at
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          cd dip-at/at-framework
+          pip install -r requirement.txt
+      
+      - name: Configure test environment
+        env:
+          TEST_HOST: ${{ secrets.VEGA_TEST_HOST }}
+          TEST_TOKEN: ${{ secrets.VEGA_TEST_TOKEN }}
+        run: |
+          cd dip-at/at-framework
+          
+          cat > config/config.ini << EOF
+          [env]
+          host = ${TEST_HOST:-10.4.111.209}
+          case_file = ./testcase/vega
+          clean_up = 1
+          clean_up_module = vega
+          
+          [external]
+          token = ${TEST_TOKEN:-your-test-token-here}
+          EOF
+      
+      - name: Run tests with smart selection
+        env:
+          CASE_NAMES: ${{ needs.select-cases.outputs.case_names }}
+          SCOPES: ${{ needs.commit-listener.outputs.scopes }}
+        run: |
+          cd dip-at/at-framework
+          
+          echo "=== Test Execution ==="
+          
+          # 优先使用 CASE_NAMES（精确筛选）
+          if [ -n "$CASE_NAMES" ]; then
+            echo "🎯 模式: 精确用例筛选"
+            echo "用例: ${CASE_NAMES:0:200}..."
+            export CASE_NAMES
+            python main.py
+          
+          # 其次使用 SCOPES（范围筛选）
+          elif [ -n "$SCOPES" ]; then
+            echo "🎯 模式: Scope 范围筛选"
+            echo "Scopes: $SCOPES"
+            # 根据 scope 设置对应的 TAGS
+            export TAGS=regression
+            python main.py
+          
+          # 兜底：冒烟测试
+          else
+            echo "🎯 模式: 兜底冒烟测试"
+            export TAGS=smoke
+            python main.py
+          fi
+      
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports-smart-${{ github.run_id }}
+          path: |
+            dip-at/at-framework/report/html
+            dip-at/at-framework/report/junit_report.xml
+          retention-days: 30
+
+  # ========== Stage 2.4: 生成报告 ==========
+  generate-report:
+    needs: [commit-listener, select-cases, run-tests]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      
+      - name: Generate summary report
+        run: |
+          echo "# Vega CI - Stage 2 测试报告" > report.md
+          echo "" >> report.md
+          echo "## 📊 执行摘要" >> report.md
+          echo "" >> report.md
+          echo "| 项目 | 值 |" >> report.md
+          echo "|------|-----|" >> report.md
+          echo "| Commit | ${{ github.sha }} |" >> report.md
+          echo "| Branch | ${{ github.ref_name }} |" >> report.md
+          echo "| Scopes | ${{ needs.commit-listener.outputs.scopes }} |" >> report.md
+          echo "| Affected APIs | ${{ needs.commit-listener.outputs.affected_apis }} |" >> report.md
+          echo "| Selection | ${{ needs.select-cases.outputs.selection_summary }} |" >> report.md
+          echo "" >> report.md
+          
+          if [ "${{ needs.run-tests.result }}" = "success" ]; then
+            echo "## ✅ 测试结果：通过" >> report.md
+          elif [ "${{ needs.run-tests.result }}" = "failure" ]; then
+            echo "## ❌ 测试结果：失败" >> report.md
+          else
+            echo "## ⚠️ 测试结果：${{ needs.run-tests.result }}" >> report.md
+          fi
+          
+          cat report.md
+      
+      - name: Upload summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-summary-${{ github.run_id }}
+          path: report.md
+      
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('report.md', 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: report
+            });
