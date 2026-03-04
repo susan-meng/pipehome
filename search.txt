@@ -1,0 +1,21 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "kn_id": "chemical-graph"
+          }
+        },
+        {
+          "term": {
+            "module_type": "relation_type"
+          }
+        }
+      ]
+    }
+  },
+  "size": 100,
+  "from": 0,
+  "sort": []
+}
