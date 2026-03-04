@@ -274,11 +274,14 @@ def main():
             "repo": os.environ.get("GITHUB_REPOSITORY", "unknown/repo"),
             "branch": os.environ.get("GITHUB_REF_NAME", "unknown"),
             "commit_sha": os.environ.get("GITHUB_SHA", "unknown"),
+            "commit_message": get_commit_message(),
             "changed_files": [],
+            "change_summary": {"added": [], "modified": [], "removed": []},
             "scopes": [],
             "scope_tags": [],
             "suggested_suites": [],
             "affected_api_names": [],
+            "affected_api_paths": [],
             "need_add_cases": False,
         }
     else:
