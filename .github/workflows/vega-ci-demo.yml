@@ -1,0 +1,185 @@
+name: Vega Module CI Demo
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:  # 支持手动触发
+
+# 同一分支新 push 取消未完成的 run
+concurrency:
+  group: vega-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ========== 1. 检查变更（简化版提交监听）==========
+  check-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      vega_changed: ${{ steps.check.outputs.vega_changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      
+      - name: Check if Vega related files changed
+        id: check
+        run: |
+          # 获取变更文件列表
+          git diff --name-only HEAD^ HEAD > changed_files.txt || echo "First commit"
+          
+          # 检查是否有 Vega 相关变更（简化：直接认为需要测试）
+          # 实际项目中这里会检查 path_scope_mapping.yaml 的匹配规则
+          echo "vega_changed=true" >> $GITHUB_OUTPUT
+          
+          echo "=== Changed Files ==="
+          cat changed_files.txt 2>/dev/null || echo "No previous commit"
+
+  # ========== 2. 运行 Vega 模块测试 ==========
+  test-vega:
+    needs: check-changes
+    if: needs.check-changes.outputs.vega_changed == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 2.1 检出测试框架代码
+      - name: Checkout test framework
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          path: dip-at
+      
+      # 2.2 设置 Python 环境
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      # 2.3 安装依赖
+      - name: Install dependencies
+        run: |
+          cd dip-at/at-framework
+          pip install -r requirement.txt
+          pip install allure-combine  # 可选：合并 Allure 报告
+      
+      # 2.4 配置测试环境
+      - name: Configure test environment
+        env:
+          TEST_HOST: ${{ secrets.VEGA_TEST_HOST }}
+          TEST_TOKEN: ${{ secrets.VEGA_TEST_TOKEN }}
+        run: |
+          cd dip-at/at-framework
+          
+          # 使用环境变量或默认值创建配置文件
+          cat > config/config.ini << EOF
+          [env]
+          host = ${TEST_HOST:-10.4.111.209}
+          case_file = ./testcase/vega
+          clean_up = 1
+          clean_up_module = vega
+          
+          [external]
+          token = ${TEST_TOKEN:-your-test-token-here}
+          EOF
+          
+          echo "=== Config ==="
+          cat config/config.ini
+      
+      # 2.5 提取要运行的用例（简化版：只跑冒烟测试）
+      - name: Extract smoke test cases
+        run: |
+          cd dip-at/at-framework
+          
+          echo "=== Available Test Suites ==="
+          ls -la testcase/vega/suites/
+          
+          echo ""
+          echo "=== Running Smoke Tests (TAGS=smoke) ==="
+          # 这里使用环境变量 TAGS 筛选冒烟测试用例
+          # 如果没有冒烟测试标签，则默认跑"查询数据源"套件
+      
+      # 2.6 执行测试
+      - name: Run tests
+        env:
+          # 可选：通过环境变量控制运行范围
+          # TAGS: smoke
+          # SCOPE: vega-data-connection
+          # API_NAME: 查询数据源列表
+        run: |
+          cd dip-at/at-framework
+          
+          # 运行测试并生成 Allure 报告
+          python main.py
+          
+          echo ""
+          echo "=== Test Execution Completed ==="
+      
+      # 2.7 上传测试报告
+      - name: Upload Allure Report
+        if: always()  # 即使测试失败也上传报告
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report-${{ github.run_id }}
+          path: |
+            dip-at/at-framework/report/html
+            dip-at/at-framework/report/junit_report.xml
+          retention-days: 30
+      
+      # 2.8 生成测试摘要
+      - name: Generate Test Summary
+        if: always()
+        run: |
+          cd dip-at/at-framework
+          
+          echo "## Test Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 解析 JUnit 报告生成摘要（如果有）
+          if [ -f report/junit_report.xml ]; then
+            echo "✅ JUnit report generated" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**Report Location:** \`report/junit_report.xml\`" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ -d report/html ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "📊 Allure HTML report generated" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Test Module:** Vega (Data Connection)" >> $GITHUB_STEP_SUMMARY
+          echo "**Environment:** ${{ secrets.VEGA_TEST_HOST }}" >> $GITHUB_STEP_SUMMARY
+
+  # ========== 3. 生成简化报告（可选）==========
+  generate-report:
+    needs: [test-vega]
+    if: always() && needs.test-vega.result != 'skipped'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Download Allure Report
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report-${{ github.run_id }}
+          path: reports
+      
+      - name: Generate Simple Report
+        run: |
+          echo "# Vega Module Test Report" > report_summary.md
+          echo "" >> report_summary.md
+          echo "- **Workflow Run:** ${{ github.run_id }}" >> report_summary.md
+          echo "- **Commit:** ${{ github.sha }}" >> report_summary.md
+          echo "- **Branch:** ${{ github.ref_name }}" >> report_summary.md
+          echo "" >> report_summary.md
+          echo "## Artifacts" >> report_summary.md
+          echo "- Allure HTML Report: Download from workflow artifacts" >> report_summary.md
+          echo "- JUnit XML: Available in artifacts" >> report_summary.md
+          
+          cat report_summary.md
+      
+      - name: Upload Summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-summary-${{ github.run_id }}
+          path: report_summary.md

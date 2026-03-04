@@ -1,0 +1,16 @@
+[env]
+# 测试环境主机地址
+host = 10.4.111.209
+
+# 当前运行的模块目录
+case_file = ./testcase/vega
+
+# 是否执行清理：1=执行，0=不执行
+clean_up = 1
+
+# 仅当配置的模块与当前运行模块一致时执行清理
+clean_up_module = vega
+
+[external]
+# API 认证 Token
+token = your-test-token-here
