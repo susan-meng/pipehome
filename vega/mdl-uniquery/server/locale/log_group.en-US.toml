@@ -1,0 +1,30 @@
+# errorcode: LogGroup
+[Uniquery.LogGroup.InvalidParameter.DataConnectionID]
+Description = "Invalid Header Parameter 'DataConnectionID'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.LogGroup.InvalidParameter.LogGroupID]
+Description = "Invalid Path Parameter 'LogGroupID'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.LogGroup.InvalidParameter.UserID]
+Description = "Invalid Path Parameter 'UserID'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.LogGroup.InvalidParameter.JobID]
+Description = "Invalid Path Parameter 'JobID'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.LogGroup.DataConnectionNotFound]
+Description = "DataConnection Not Found"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.LogGroup.InternalError]
+Description = "LogGroup InternalError"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"

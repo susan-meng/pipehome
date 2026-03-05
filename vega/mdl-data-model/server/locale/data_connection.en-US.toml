@@ -1,0 +1,135 @@
+# DataConnection
+[DataModel.DataConnection.NullParameter.ConnectionName]
+Description = "The Data Connection Name is empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.LengthExceeded.ConnectionName]
+Description = "The Data Connection Name exceeds the length limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InvalidParameter.ConnectionIDs]
+Description = "Invalid Data Connection ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.ConnectionNameExisted]
+Description = "The same Data Connection Name already exists"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InvalidParameter.DataSourceType]
+Description = "Invalid Data Source Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.ForbiddenUpdateParameter.DataSourceType]
+Description = "Updating Data Source Type is prohibited"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.NullParameter.Address]
+Description = "The Data Connection Address is empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InvalidParameter.Protocol]
+Description = "Invalid Connection Protocol"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.NullParameter.ApiKey]
+Description = "The API Key is empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.NullParameter.SecretKey]
+Description = "The Secret Key is empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.DuplicatedParameter.Config]
+Description = "The same Data Connection configuration already exists"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.DataConnectionNotFound]
+Description = "The Data Connection does not exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.GetMapAboutName2IDFailed]
+Description = "An internal server error occurred while getting Name-to-ID mappings by Data Connection Name"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.GetMapAboutID2NameFailed]
+Description = "An internal server error occurred while getting ID-to-Name mappings by Data Connection ID"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.GetGetDataConnectionSourceTypeFailed]
+Description = "An internal server error occurred while getting data source type of Data Connection"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.CreateDataConnectionFailed]
+Description = "An internal server error occurred while creating Data Connection"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.DeleteDataConnectionsFailed]
+Description = "An internal server error occurred while deleting Data Connection"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.UpdateDataConnectionFailed]
+Description = "An internal server error occurred while updating Data Connection"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.GetDataConnectionsFailed]
+Description = "An internal server error occurred while getting Data Connection"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.ListDataConnectionsFailed]
+Description = "An internal server error occurred while getting Data Connection List"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.GetDataConnectionTotalFailed]
+Description = "An internal server error occurred while getting the total count of Data Connection"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.CreateDataConnectionStatusFailed]
+Description = "An internal server error occurred while creating Data Connection Status"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.DeleteDataConnectionStatusesFailed]
+Description = "An internal server error occurred while deleting Data Connection Status"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.UpdateDataConnectionStatusFailed]
+Description = "An internal server error occurred while updating Data Connection Status"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.GetAccessTokenFailed]
+Description = "An internal server error occurred while getting the access token"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.VerifyConnectivityFailed]
+Description = "An internal server error occurred while verifying connectivity"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataConnection.InternalError.InitDataConnectionProcessor]
+Description = "An internal server error occurred while initializing Data Connection Processor"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"

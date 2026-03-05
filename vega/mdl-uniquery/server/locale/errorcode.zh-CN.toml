@@ -1,0 +1,151 @@
+# 错误码: 公共
+[Uniquery.NullParameter.OverrideMethod]
+Description = "HTTP 请求头字段 X-HTTP-Method-Override 为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidParameter.OverrideMethod]
+Description = "指定的 HTTP 请求头字段 X-HTTP-Method-Override 无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidParameter.RequestBody]
+Description = "请求体无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidParameter.Start]
+Description = "指定的开始时间无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidParameter.End]
+Description = "指定的结束时间无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.InvalidParameter.Offset]
+Description = "指定的偏移量无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.InvalidParameter.Limit]
+Description = "指定的每页数量限制无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.InvalidParameter.Sort]
+Description = "指定的排序类型无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.InvalidParameter.Direction]
+Description = "指定的排序方向无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidParameter.OffestAndLimitSum]
+Description = "无效的偏移量与每页数量限制的和"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidParameter.Filter]
+Description = "无效的过滤条件"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.NullParameter.FieldName]
+Description = "指定的字段名参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.NullParameter.FilterName]
+Description = "过滤器字段名称参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.NullParameter.FilterOperation]
+Description = "过滤器操作符参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.NullParameter.FilterValue]
+Description = "过滤器值参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidParameter.FilterName]
+Description = "过滤器字段参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidParameter.FilterValue]
+Description = "过滤器值参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.UnsupportFilterOperation]
+Description = "不支持的过滤器操作符"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidParameter.ValueFrom]
+Description = "过滤条件的字段值来源无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.Forbidden.FilterField]
+Description = "不允许过滤的字段"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidRequestHeader.Authorization]
+Description = "认证失败"
+Solution = "请检查Http请求头"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidRequestHeader.ContentType]
+Description = "无效的ContentType"
+Solution = "请检查Http请求头"
+ErrorLink = "暂无"
+
+[UniQuery.InternalError]
+Description = "服务器内部错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.InternalError.CheckPermissionFailed]
+Description = "校验权限时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.InternalError.FilterResourcesFailed]
+Description = "资源过滤时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.InternalError.GetResourcesOperationsFailed]
+Description = "获取资源操作时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.InternalError.SearchSubmitFailed]
+Description = "查询数据失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.InternalError.ScrollFailed]
+Description = "Scroll 翻页查询数据失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.InternalError.CountFailed]
+Description = "查询总数时，服务器内部发送错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.InvalidParameter]
+Description = "请求参数不合法"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+

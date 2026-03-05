@@ -1,0 +1,25 @@
+# data-view
+[DataModelJob.InvalidParameter.Job]
+Description = "Invalid Parameter Job"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModelJob.InvalidParameter.JobId]
+Description = "Invalid Job Id"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModelJob.InternalError.StartJobFailed]
+Description = "Create Job Failed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModelJob.InternalError.UpdateJobFailed]
+Description = "Update Job Failed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModelJob.InternalError.StopJobFailed]
+Description = "Delete Job Failed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"

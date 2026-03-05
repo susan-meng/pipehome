@@ -1,0 +1,52 @@
+server:
+  runMode: release
+  httpPort: 8097
+  language: zh-CN
+log:
+  logLevel: debug
+  developMode: true
+  maxAge: 100
+  maxBackups: 20
+  maxSize: 100
+pool:
+  queryPoolSize: 100                   # 查询池大小
+query:
+  cleanIntervalTime: 5m                # 查询清理间隔
+  maxIntervalTime: 1h                  # 查询取数最大间隔时间
+  dataQuerySize: 10000                 # 单次内部查询数据量及再次查询临界值
+  dataCacheSize: 20000                 # 单个查询内部缓存数据量
+trace:
+  maxSearchSpanSize: 1000
+observability:
+  logEnabled: false
+  traceEnabled: false
+  metricEnabled: false
+  logExporter: console
+  traceProvider: http
+  metricProvider: http
+  logLoadInternal: 1
+  logLoadMaxLog: 10
+  traceMaxQueueSize: 50000
+  metricIntervalSecond: 60
+  httpLogFeedIngesterUrl: http://feed-ingester-service:13031/api/feed_ingester/v1/jobs/dip-o11y-log/events
+  httpTraceFeedIngesterUrl: http://feed-ingester-service:13031/api/feed_ingester/v1/jobs/dip-o11y-trace/events
+  httpMetricFeedIngesterUrl: http://feed-ingester-service:13031/api/feed_ingester/v1/jobs/dip-o11y-metric/events
+  grpcTraceFeedIngesterUrl: feed-ingester-service:30013
+  grpcTraceJobId: dip-o11y-trace-grpc
+depServices:
+  class-443:
+    ingressClass: class-443
+  hydra-admin:
+    host: 10.4.110.188
+    port: 4445
+    protocol: http
+  data-connection:
+    host: 10.4.110.188
+    port: 8098
+    protocol: http
+  vega-calculate-coordinator:
+    host: 10.4.110.188
+    port: 8090
+    protocol: http
+rsa:
+  privateKeyPath: /common/rsa/private_key.pem

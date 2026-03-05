@@ -1,0 +1,192 @@
+// Copyright The kweaver.ai Authors.
+//
+// Licensed under the Apache License, Version 2.0.
+// See the LICENSE file in the project root for details.
+
+package condition
+
+import (
+	"context"
+	"fmt"
+	"strings"
+
+	"uniquery/common"
+	vopt "uniquery/common/value_opt"
+)
+
+type ContainCond struct {
+	mCfg             *CondCfg
+	IsSliceValue     bool
+	mValue           any
+	mSliceValue      []any
+	mFilterFieldName string
+}
+
+// 包含 contain，左侧属性值为数组，右侧值为单个值或数组，如果为数组，意味着数组内的值都应在属性值内
+func NewContainCond(ctx context.Context, cfg *CondCfg, fieldsMap map[string]*ViewField) (Condition, error) {
+	if cfg.ValueFrom != vopt.ValueFrom_Const {
+		return nil, fmt.Errorf("condition [contain] does not support value_from type '%s'", cfg.ValueFrom)
+	}
+
+	featureType := FieldFeatureType_Raw
+	if IsTextType(fieldsMap[cfg.Name]) {
+		featureType = FieldFeatureType_Keyword
+	}
+
+	fName, err := GetQueryField(ctx, cfg.Name, fieldsMap, featureType)
+	if err != nil {
+		return nil, fmt.Errorf("condition [contain], %v", err)
+	}
+
+	containCond := &ContainCond{
+		mCfg:             cfg,
+		mFilterFieldName: fName,
+	}
+
+	if common.IsSlice(cfg.Value) {
+		if len(cfg.Value.([]any)) == 0 {
+			return nil, fmt.Errorf("condition [contain] right value is an empty array")
+		}
+
+		containCond.IsSliceValue = true
+		containCond.mSliceValue = cfg.Value.([]any)
+
+	} else {
+		containCond.IsSliceValue = false
+		containCond.mValue = cfg.Value
+	}
+
+	return containCond, nil
+
+}
+
+/*
+如果右侧为数组，则生成如下dsl:
+
+	{
+	  "bool": {
+	    "filter": [
+	      {
+	        "term": {
+	          "<field>": {
+	            "value": <value1>
+	          }
+	        }
+	      },
+	      {
+	        "term": {
+	          "<field>": {
+	            "value": <value2>
+	          }
+	        }
+	      }
+	    ]
+	  }
+	}
+
+如果右侧为单个值，则生成如下dsl:
+
+	{
+	  "term": {
+	    "<field>": {
+	      "value": <value>
+	    }
+	  }
+	}
+*/
+func (cond *ContainCond) Convert(ctx context.Context) (string, error) {
+	var dslStr string
+	if cond.IsSliceValue {
+		subStrs := []string{}
+		for _, val := range cond.mSliceValue {
+			vStr, ok := val.(string)
+			if ok {
+				val = fmt.Sprintf("%q", vStr)
+			}
+
+			subStr := fmt.Sprintf(`
+						{
+							"term": {
+								"%s": {
+									"value": %v
+								}
+							}
+						}`, cond.mFilterFieldName, val)
+
+			subStrs = append(subStrs, subStr)
+
+		}
+
+		dslStr = fmt.Sprintf(`
+			{
+				"bool": {
+					"filter": [
+						%s
+					]
+				}
+			}
+		`, strings.Join(subStrs, ","))
+
+	} else {
+		val := cond.mValue
+		vStr, ok := val.(string)
+		if ok {
+			val = fmt.Sprintf("%q", vStr)
+		}
+
+		dslStr = fmt.Sprintf(`
+						{
+							"term": {
+								"%s": {
+									"value": %v
+								}
+							}
+						}`, cond.mFilterFieldName, val)
+	}
+
+	return dslStr, nil
+}
+
+func (cond *ContainCond) Convert2SQL(ctx context.Context) (string, error) {
+	// 使用json_array_contains函数实现contain操作
+	// 左侧属性值为数组，右侧值为单个值或数组
+	// 如果右侧为数组，意味着数组内的值都应在属性值内（即所有右侧值都需要被包含）
+	var sqlStr string
+
+	if cond.IsSliceValue {
+		// 右侧为数组，需要所有值都在左侧数组中
+		// 为每个值生成一个json_array_contains条件，并用AND连接
+		conditions := []string{}
+		for _, val := range cond.mSliceValue {
+			var condition string
+			vStr, ok := val.(string)
+			if ok {
+				// 处理字符串值，转义单引号
+				escapedVal := strings.ReplaceAll(vStr, "'", "''")
+				condition = fmt.Sprintf(`json_array_contains("%s", '%s')`, cond.mFilterFieldName, escapedVal)
+			} else {
+				// 处理非字符串值
+				condition = fmt.Sprintf(`json_array_contains("%s", %v)`, cond.mFilterFieldName, val)
+			}
+			conditions = append(conditions, condition)
+		}
+
+		// 使用AND连接所有条件，确保所有右侧值都在左侧数组中
+		sqlStr = strings.Join(conditions, " AND ")
+
+	} else {
+		// 右侧为单个值
+		val := cond.mValue
+		vStr, ok := val.(string)
+		if ok {
+			// 处理字符串值，转义单引号
+			escapedVal := strings.ReplaceAll(vStr, "'", "''")
+			sqlStr = fmt.Sprintf(`json_array_contains("%s", '%s')`, cond.mFilterFieldName, escapedVal)
+		} else {
+			// 处理非字符串值
+			sqlStr = fmt.Sprintf(`json_array_contains("%s", %v)`, cond.mFilterFieldName, val)
+		}
+	}
+
+	return sqlStr, nil
+}

@@ -1,0 +1,175 @@
+# TraceModel
+[DataModel.TraceModel.NullParameter.ModelName]
+Description = "The Trace Model Name is empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.LengthExceeded.ModelName]
+Description = "The Trace Model Name exceeds the length limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidParameter.ModelIDs]
+Description = "Invalid Trace Model ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.NotUniqueInBatch.ModelName]
+Description = "The Trace Model Name already exists in the same batch"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.ModelNameExisted]
+Description = "Same Trace Model Name already exists"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig]
+Description = "Invalid Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.TraceID]
+Description = "Invalid Trace ID in Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.SpanID]
+Description = "Invalid Span ID in Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.ParentSpanID]
+Description = "Invalid Parent Span ID in Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.Name]
+Description = "Invalid Span Name in Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.StartTime]
+Description = "Invalid Span Start Time in Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.EndTime]
+Description = "Invalid Span End Time in Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.Duration]
+Description = "Invalid Span Duration in Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.Kind]
+Description = "Invalid Span Kind in Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.Status]
+Description = "Invalid Span Status in Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.ServiceName]
+Description = "Invalid Service Name of Span in Basic Attribute Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidRelatedLogConfig.TraceID]
+Description = "Invalid Trace ID in the Related Log"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidRelatedLogConfig.SpanID]
+Description = "Invalid Span ID in the Related Log"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.DependentDataViewNotFound]
+Description = "The dependent Data View does not exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.DependentDataConnectionNotFound]
+Description = "The dependent Data Connection does not exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidParameter.SpanSourceType]
+Description = "Invalid Data Source Type of Span"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidParameter.RelatedLogSourceType]
+Description = "Invalid Source Type of Related Log"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InvalidParameter.EnabledRelatedLog]
+Description = "Invalid switching parameter of Related Log"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.TraceModelNotFound]
+Description = "The Trace Model does not exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.GetSimpleTraceModelMapByIDsFailed]
+Description = "An internal server error occurred while getting the mappings between Trace Model ID and Simple Trace Model"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.GetDetailedTraceModelMapByIDsFailed]
+Description = "An internal server error occurred while getting the mappings between Trace Model ID and Detailed Trace Model"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.GetSimpleTraceModelMapByNamesFailed]
+Description = "An internal server error occurred while getting the mappings between Trace Model Name and Simple Trace Model"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.CreateTraceModelsFailed]
+Description = "An internal server error occurred while creating Trace Model"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.DeleteTraceModelsFailed]
+Description = "An internal server error occurred while deleting Trace Model"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.UpdateTraceModelFailed]
+Description = "An internal server error occurred while updating Trace Model"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.GetTraceModelsFailed]
+Description = "An internal server error occurred while getting Trace Model"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.ListTraceModelsFailed]
+Description = "An internal server error occurred while getting Trace Model List"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.GetTraceModelTotalFailed]
+Description = "An internal server error occurred while getting the total count of Trace Model"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.InitTraceModelProcessor]
+Description = "An internal server error occurred while initializing Trace Model Processor"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.TraceModel.InternalError.GetUnderlyingDataSourceTypeFailed]
+Description = "An internal server error occurred while getting the underlying Data Source Type"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"

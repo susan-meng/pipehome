@@ -1,0 +1,592 @@
+# 指标模型
+[DataModel.MetricModel.AggregationNotExisted]
+Description = "聚合字段在Vega逻辑视图中不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.AnalysisDimensionNotExisted]
+Description = "分析维度在Vega逻辑视图中不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter]
+Description = "请求参数不合法"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.ModelNameExisted]
+Description = "指标模型名称已经存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.IDExisted]
+Description = "指标模型ID已经存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.CombinationNameExisted]
+Description = "指标模型名称已经存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.OrderByFieldNotExisted]
+Description = "排序字段在指标模型的可选排序字段集中不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.ModelName]
+Description = "指标模型名称为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.OrderByDirection]
+Description = "排序方向为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.OrderByName]
+Description = "排序字段名称为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.MetricType]
+Description = "指标类型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.DependMetricModel]
+Description = "依赖的指标模型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.DateField]
+Description = "日期时间标识字段为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.DataSource]
+Description = "数据源为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.DataSourceID]
+Description = "数据源ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.DerivedCondition]
+Description = "衍生指标的过滤条件为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.DataView]
+Description = "数据视图名称为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.QueryType]
+Description = "查询语言为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.Formula]
+Description = "计算公式为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.FormulaConfig]
+Description = "计算公式配置为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.HavingConditionName]
+Description = "Having过滤字段名配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.HavingConditionOperation]
+Description = "Having过滤操作符为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.MeasureField]
+Description = "度量字段为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.UnitType]
+Description = "单位类型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.Unit]
+Description = "度量单位为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.LengthExceeded.ModelName]
+Description = "指标模型名称长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.CountExceeded.TagTotal]
+Description = "数据标签个数超过5个"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.ModelID]
+Description = "指标模型 id 无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.OrderByDirection]
+Description = "排序方向无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.Formula]
+Description = "计算公式无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.Group]
+Description = "指标模型绑定的分组无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.DateField]
+Description = "时间维度无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.DateFormat]
+Description = "时间格式无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.DataSourceType]
+Description = "数据源类型无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.DerivedCondition]
+Description = "衍生指标的过滤条件无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.IncludeView]
+Description = "查询参数 'include_view' 无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.MeasureField]
+Description = "度量字段无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.MeasureFieldNotExists]
+Description = "度量字段在视图中不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.UnitType]
+Description = "单位类型无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.UnsupportMetricType]
+Description = "不支持的指标类型"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.UnsupportQueryType]
+Description = "不支持的查询语言"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.UnsupportHavingConditionOperation]
+Description = "不支持的值过滤操作符"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.Duplicated.ModelName]
+Description = "存在重复的指标模型名称"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.Duplicated.ModelIDInFile]
+Description = "存在重复的指标模型ID"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.Duplicated.CombinationName]
+Description = "存在重复的指标模型组合名称"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.Duplicated.TaskStep]
+Description = "持久化任务间的步长和过滤条件同时存在重复"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.MetricModelNotFound]
+Description = "指标模型不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.MetricTaskNotFound]
+Description = "指标持久化任务不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.MeasureName]
+Description = "度量名称为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.LengthExceeded.MeasureName]
+Description = "度量名称长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.MeasureName]
+Description = "度量名称无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.Duplicated.MeasureName]
+Description = "度量名称不唯一"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.TaskName]
+Description = "任务名称为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.CountExceeded.TaskTotal]
+Description = "任务数量超过1"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.LengthExceeded.TaskName]
+Description = "持久化任务名称长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.DateFieldNotExisted]
+Description = "时间字段在Vega逻辑视图中不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.Duplicated.TaskName]
+Description = "存在重复的持久化任务名称"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.TaskNameExisted]
+Description = "存在重复的持久化任务名称"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.Schedule]
+Description = "持久化任务执行频率为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.ScheduleType]
+Description = "持久化任务执行频率类型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.SQLAggrExpression]
+Description = "聚合表达式（SQL）为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.SQLConfig]
+Description = "SQL计算公式为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.SQLExpression]
+Description = "SQL的度量计算表达式为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.ScheduleType]
+Description = "持久化任务执行频率类型无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.FormulaConfig]
+Description = "计算公式配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.SQLAggrExpression]
+Description = "聚合表达式（SQL）配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.SQLCondition]
+Description = "数据过滤（SQL）配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.ScheduleExpression]
+Description = "持久化任务执行频率表达式为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.ScheduleExpression]
+Description = "持久化任务执行频率表达式无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.FilterName]
+Description = "持久化任务过滤条件的字段名称为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.FilterOperation]
+Description = "持久化任务过滤条件的操作符为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.FilterOperation]
+Description = "持久化任务过滤条件的操作符无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.FilterValue]
+Description = "持久化任务过滤条件的值参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.FilterValue]
+Description = "持久化任务过滤条件的值参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.TimeWindows]
+Description = "持久化任务时间窗口为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.TimeWindows]
+Description = "持久化任务时间窗口无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.Duplicated.TimeWindows]
+Description = "存在重复的持久化任务时间窗口"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.GroupByFieldNotExisted]
+Description = "分组字段在Vega逻辑视图中不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.Step]
+Description = "持久化步长为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.Step]
+Description = "持久化步长无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.NullParameter.IndexBase]
+Description = "持久化任务的索引库为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.Duplicated.IndexBase]
+Description = "持久化任务的索引库在该模型下不唯一"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InvalidParameter.RetraceDuration]
+Description = "持久化任务追溯时长无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.LengthExceeded.TaskComment]
+Description = "持久化任务备注长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError]
+Description = "内部错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.GenerateIDFailed]
+Description = "生成分布式 id 失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.GetModelByIDFailed]
+Description = "按 id 获取指标模型失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.GetModelIDByNameFailed]
+Description = "按分组名称和指标模型名称 获取指标模型id失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.GetMetricTasksByModelIDsFailed]
+Description = "按指标模型id获取指标模型持久化任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.CheckMetricModelTaskExistByName]
+Description = "按模型id和任务名称获取持久化任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.CheckModelIfExistFailed]
+Description = "检查指标模型名称是否存在失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.GetDataViewByIDFailed]
+Description = "按 id 获取数据视图失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.GetDataViewQueryFiltersFailed]
+Description = "获取数据视图的过滤条件失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.GetDataViewByNameFailed]
+Description = "按名称获取数据视图失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.CheckFormulaFailed]
+Description = "计算公式有效性检查失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.MeasureNameRuleCompileFailed]
+Description = "校验度量名称的解析规则解析异常"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.CheckDuplicateMeasureNameFailed]
+Description = "校验度量名称的唯一性异常"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.BeginTransactionFailed]
+Description = "开启事务异常"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.GetSimpleIndexBasesByTypesFailed]
+Description = "根据索引类型获取索引名称失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModel.InternalError.GetMetricTaskByIDFailed]
+Description = "根据任务ID获取指标数据持久化任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+# 指标模型分组
+[DataModel.MetricModelGroup.InvalidParameter]
+Description = "请求参数不合法"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.InvalidParameter.Builtin]
+Description = "指标模型分组参数 'builtin' 无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+
+[DataModel.MetricModelGroup.InvalidParameter.Force]
+Description = "指定的force无效"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.InvalidParameter.GroupID]
+Description = "指定的groupID无效"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.GroupNameExisted]
+Description = "指标模型分组名称已存在"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.NullParameter.GroupName]
+Description = "指标模型分组名称为空"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.LengthExceeded.GroupName]
+Description = "指标模型分组名称长度超出限制"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.GroupNotFound]
+Description = "指标模型分组不存在"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.InternalError]
+Description = "服务器内部错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.InternalError.GenerateIDFailed]
+Description = "生成分布式ID时，服务器内部发生错误"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError.GetGroupByIDFailed]
+Description = "获取指标模型分组时，服务器内部发生错误"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError.CheckGroupIfExistFailed]
+Description = "检查指标模型分组名称是否存在失败"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError.GetGroupsTotalFailed]
+Description = "获取指标模型分组总数失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.InternalError.GetMetricModelGroupIDByNameFailed]
+Description = "通过名称获取指标模型分组ID失败"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError.ListGroupsFailed]
+Description = "获取指标模型分组列表失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.GroupNotEmpty]
+Description = "分组不为空"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.ForbiddenBuiltinGroupID]
+Description = "不能使用系统预留的内置分组 ID"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.MetricModelGroup.ForbiddenDeleteBuiltinGroup]
+Description = "内置分组不能删除"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"

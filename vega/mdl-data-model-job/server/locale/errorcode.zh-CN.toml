@@ -1,0 +1,25 @@
+# 数据视图
+[DataModelJob.InvalidParameter.Job]
+Description = "任务参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModelJob.InvalidParameter.JobId]
+Description = "任务ID参数无效"
+Solution = "请检查参数是否正确。"    
+ErrorLink = "暂无"
+
+[DataModelJob.InternalError.StartJobFailed]
+Description = "创建任务失败"
+Solution = "请检查参数是否正确。"    
+ErrorLink = "暂无"
+
+[DataModelJob.InternalError.UpdateJobFailed]
+Description = "更新任务失败"
+Solution = "请检查参数是否正确。"    
+ErrorLink = "暂无"
+
+[DataModelJob.InternalError.StopJobFailed]
+Description = "删除任务失败"
+Solution = "请检查参数是否正确。"    
+ErrorLink = "暂无"

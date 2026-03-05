@@ -1,0 +1,255 @@
+# 指标模型
+[DataModel.ObjectiveModel.InvalidParameter]
+Description = "请求参数不合法"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无" 
+
+[DataModel.ObjectiveModel.NullParameter.ModelName]
+Description = "目标模型名称为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.ObjectiveType]
+Description = "目标类型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.ObjectiveConfig]
+Description = "目标配置为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.Task]
+Description = "目标模型的持久化配置为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.Schedule]
+Description = "目标模型持久化配置的执行频率为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.ScheduleExpression]
+Description = "目标模型持久化配置的执行频率表达式为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.ScheduleType]
+Description = "持久化任务执行频率类型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.Period]
+Description = "SLO类型的目标模型的周期为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.GoodMetricModel]
+Description = "SLO类型的目标模型的良好指标为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.GoodMetricModelID]
+Description = "SLO类型的目标模型的良好指标模型的ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.TotalMetricModel]
+Description = "SLO类型的目标模型的总指标模型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.TotalMetricModelID]
+Description = "SLO类型的目标模型的总指标模型的ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.ObjectiveUnit]
+Description = "目标单位为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.ComprehensiveMetricModels]
+Description = "综合计算指标为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.ComprehensiveMetricModelID]
+Description = "综合计算指标列表中的指标模型ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.ComprehensiveWeight]
+Description = "综合计算指标列表中的指标权重为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.AdditionalMetricModelID]
+Description = "附加计算指标列表中的指标模型ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.Objective]
+Description = "目标为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.IndexBase]
+Description = "目标模型持久化配置的索引库为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.NullParameter.Step]
+Description = "目标模型持久化配置的步长为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InvalidParameter.RetraceDuration]
+Description = "目标模型持久化配置的追溯时长无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InvalidParameter.ScheduleExpression]
+Description = "目标模型持久化配置的执行频率表达式无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InvalidParameter.ScheduleType]
+Description = "目标模型持久化配置的执行频率类型无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InvalidParameter.Step]
+Description = "目标模型持久化配置的步长无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InvalidParameter.ObjectiveConfig]
+Description = "目标配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InvalidParameter.Objective]
+Description = "目标无效，必须大于0"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InvalidParameter.Period]
+Description = "周期无效，必须大于0"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InvalidParameter.ObjectiveUnit]
+Description = "目标单位u无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.CountExceeded.ComprehensiveMetricModelsTotal]
+Description = "综合计算指标超过10个"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.CountExceeded.AdditionalMetricModelsTotal]
+Description = "附加计算指标超过5个"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.CountExceeded.StatusTotal]
+Description = "状态配置超过10个"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.AssociateMetricModelsUnit.Different]
+Description = "关联的指标模型的单位不尽相同"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InvalidParameter.ComprehensiveWeight]
+Description = "综合计算指标的权重无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InvalidParameter.StatusRanges]
+Description = "状态阈值配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.Duplicated.TaskStep]
+Description = "持久化步长存在重复"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.Duplicated.ObjectiveModelName]
+Description = "目标模型名称存在重复"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.ModelIDExisted]
+Description = "目标模型ID已存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.ModelNameExisted]
+Description = "目标模型名称已存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.LengthExceeded.ModelName]
+Description = "指标模型名称长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.LengthExceeded.TaskComment]
+Description = "持久化任务备注长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.UnsupportObjectiveType]
+Description = "不支持的目标类型"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.ObjectiveModelNotFound]
+Description = "目标模型不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.MetricModelNotFound]
+Description = "目标模型关联的指标模型不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InternalError.GetSimpleIndexBasesByTypesFailed]
+Description = "根据索引类型获取索引名称失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InternalError]
+Description = "内部错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InternalError.BeginTransactionFailed]
+Description = "开启事务异常"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InternalError.CheckModelIfExistFailed]
+Description = "检查目标模型名称是否存在失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InternalError.GenerateIDFailed]
+Description = "生成分布式 id 失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InternalError.GetMetricTasksByModelIDsFailed]
+Description = "按目标模型id获取持久化任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.ObjectiveModel.InternalError.GetObjectiveModelsByModelIDsFailed]
+Description = "按目标模型id获取目标模型失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"

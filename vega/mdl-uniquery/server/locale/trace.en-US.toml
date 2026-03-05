@@ -1,0 +1,50 @@
+# errorcode: Trace
+[UniQuery.Trace.InvalidParameter.StartTime]
+Description = "Invalid Start Time"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[UniQuery.Trace.InvalidParameter.EndTime]
+Description = "Invalid End Time"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[UniQuery.Trace.InvalidParameter.SpanStatuses]
+Description = "Invalid Span Status"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[UniQuery.Trace.InvalidParameter.TraceDataViewID]
+Description = "Invalid Trace Data View ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[UniQuery.Trace.InvalidParameter.LogDataViewID]
+Description = "Invalid Data View ID of Correlated Log"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[UniQuery.Trace.MissingParameter.TraceDataViewID]
+Description = "Trace Data View ID Missed"
+Solution = "Please check whether the parameter is passed."
+ErrorLink = "None"
+
+[UniQuery.Trace.MissingParameter.LogDataViewID]
+Description = "Data View ID of Correlated Log Missed"
+Solution = "Please check whether the parameter is passed."
+ErrorLink = "None"
+
+[UniQuery.Trace.TraceDataViewNotFound]
+Description = "The Trace Data View Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[UniQuery.Trace.LogDataViewNotFound]
+Description = "The Log Data View Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[UniQuery.Trace.TraceNotFound]
+Description = "The Trace Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"

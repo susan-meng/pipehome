@@ -1,0 +1,135 @@
+# 数据连接
+[DataModel.DataConnection.NullParameter.ConnectionName]
+Description = "数据连接名称为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.LengthExceeded.ConnectionName]
+Description = "数据连接名称长度超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InvalidParameter.ConnectionIDs]
+Description = "数据连接ID无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.ConnectionNameExisted]
+Description = "数据连接名称已经存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InvalidParameter.DataSourceType]
+Description = "数据来源类型无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.ForbiddenUpdateParameter.DataSourceType]
+Description = "数据来源类型禁止修改"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.NullParameter.Address]
+Description = "连接地址为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InvalidParameter.Protocol]
+Description = "连接协议无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.NullParameter.ApiKey]
+Description = "用户ID为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.NullParameter.SecretKey]
+Description = "密钥为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.DuplicatedParameter.Config]
+Description = "数据连接配置已经存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.DataConnectionNotFound]
+Description = "数据连接不存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.GetMapAboutName2IDFailed]
+Description = "获取数据连接名称与ID的映射关系时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.GetMapAboutID2NameFailed]
+Description = "获取数据连接ID与名称的映射关系时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.GetGetDataConnectionSourceTypeFailed]
+Description = "获取数据连接数据来源类型时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.CreateDataConnectionFailed]
+Description = "创建数据连接时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.DeleteDataConnectionsFailed]
+Description = "删除数据连接时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.UpdateDataConnectionFailed]
+Description = "修改数据连接时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.GetDataConnectionsFailed]
+Description = "获取数据连接时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.ListDataConnectionsFailed]
+Description = "获取数据连接列表时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.GetDataConnectionTotalFailed]
+Description = "获取数据连接总数时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.CreateDataConnectionStatusFailed]
+Description = "创建数据连接状态时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.DeleteDataConnectionStatusesFailed]
+Description = "删除数据连接状态时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.UpdateDataConnectionStatusFailed]
+Description = "修改数据连接状态时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.GetAccessTokenFailed]
+Description = "获取访问令牌时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.VerifyConnectivityFailed]
+Description = "校验连通性时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataConnection.InternalError.InitDataConnectionProcessor]
+Description = "初始化数据连接处理器时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"

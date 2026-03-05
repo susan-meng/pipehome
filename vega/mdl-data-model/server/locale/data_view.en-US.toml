@@ -1,0 +1,498 @@
+# 逻辑视图
+[DataModel.DataView.InvalidParameter.FieldFeatureName]
+Description = "Invalid Field Feature Name"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.FieldName]
+Description = "Invalid Field Name"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Duplicated.ViewIDInFile]
+Description = "Same View ID Exists In The File: '{{.ViewID}}'"
+Solution = "Please check whether the data views in the imported file are correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Duplicated.ViewNameInFile]
+Description = "Same View Name Exists Within The Group '{{.GroupName}}' In The File: '{{.ViewName}}'"
+Solution = "Please check whether the data views in the imported file are correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Duplicated.ViewTechnicalNameInFile]
+Description = "Same View Technical Name Exists Within The Group '{{.GroupName}}' In The File: '{{.TechnicalName}}'"
+Solution = "Please check whether the data views in the imported file are correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Duplicated.ViewID]
+Description = "Same View ID Existed in the database"
+Solution = "Please check logical view ID is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.NullParameter.ViewName]
+Description = "View Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.LengthExceeded.ViewName]
+Description = "The Length of View Name Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.LengthExceeded.ViewGroupName]
+Description = "The Length of View Group Name Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.NullParameter.AttributeFields]
+Description = "Attribute Fields Are Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.NullParameter.IndexBaseType]
+Description = "Index Base Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.NullParameter.Fields]
+Description = "View Fields Are Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.LengthExceeded.Comment]
+Description = "The Length of Comment Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.LengthExceeded.FieldComment]
+Description = "The Length of Field Comment Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.LengthExceeded.FieldFeatureComment]
+Description = "The Length of Field Feature Comment Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.LengthExceeded.FieldFeatureName]
+Description = "The Length of Field Feature Name Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.LengthExceeded.FieldName]
+Description = "The Length of Field Name Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.LengthExceeded.FieldDisplayName]
+Description = "The Length of Field Display Name Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.AttributeFields]
+Description = "Invalid Attribute Fields"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.Builtin]
+Description = "Invalid Builtin"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.ViewID]
+Description = "Invalid View ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.DataScope]
+Description = "Invalid Data Scope"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.DataSource]
+Description = "Invalid Data Souce"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.FieldScope]
+Description = "Invalid Field Scope"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.ImportMode]
+Description = "Invalid Import Mode"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.LogGroupFilters]
+Description = "Logical view that contains log group filters does not support real-time streaming"
+Solution = "Please check whether the parameter 'loggroup_filters' is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.OpenStreaming]
+Description = "Invalid OpenStreaming"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.TechnicalName]
+Description = "Invalid Technical Name"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.UnsupportDataSourceType]
+Description = "Unsupport Data Source Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Duplicated.ViewName]
+Description = "Duplicated Logical View Name '{{.ViewName}}' in the Group '{{.GroupName}}'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Existed.ViewID]
+Description = "Same Logical View ID Existed"
+Solution = "Please check logical view ID is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Existed.ViewName]
+Description = "Same Logical View Name '{{.ViewName}}' Existed in the Group '{{.GroupName}}'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Existed.TechnicalName]
+Description = "Same Logical View Technical Name '{{.TechnicalName}}' Existed in the Group '{{.GroupName}}'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.FilterFieldTypeMisMatchOperation]
+Description = "Filter Field '{{.FieldName}}' Type '{{.FieldType}}' Does Not Match Operation '{{.Operation}}'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidFieldPermission.Filters]
+Description = "The Filter Field '{{.FieldName}}' Is not In The View Fields List"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.MissingRequiredField]
+Description = "Missing Required Field"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.FieldTypeConflict]
+Description = "Field Type Conflict"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.IndexbaseNotFound]
+Description = "The Index Base Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.CountExceeded.Filters]
+Description = "The Number Of Filters Exceeds The Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Duplicated.FieldDisplayName]
+Description = "Field Name '{{.FieldName}}' Display Name {{.DisplayName}} Already Exists"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Duplicated.FieldFeatureName]
+Description = "Field Feature Name '{{.FieldFeatureName}}' Already Exists"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Duplicated.FieldName]
+Description = "Field Name '{{.FieldName}}' Already Exists"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidParameter.IncludeBuiltin]
+Description = "Invalid IncludeBuiltin"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.FilterBinaryFieldsForbidden]
+Description = "Binary Fields Do Not Support Filtering"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InvalidBuiltinGroupMatch]
+Description = "Built-in views must use built-in groups, non-built-in views must use non-built-in groups"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.RealTimeStreamingForbidden]
+Description = "Real-time Streaming Is Forbidden"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.DataViewNotFound]
+Description = "The Logical View Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.Unsupport.ContextType]
+Description = "Unsupport Context Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.GetDataViewsFailed]
+Description = "Get View By ID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.CheckViewIfExistFailed]
+Description = "Check View Exists Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.GetIndexBaseByTypeFailed]
+Description = "Get Index Base By Type Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.DeleteDataViewsFailed]
+Description = "Delete Data Views Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.InvalidReferenceView]
+Description = "Invalid Reference Atomic View"
+Solution = "Please Check Whether The Reference Atomic View Is Valid."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.ListDataViewsFailed]
+Description = "List Data Views Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.GetDataViewsTotalFailed]
+Description = "Get Data Views Total Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.CreateDataViewsFailed]
+Description = "Create Data Views Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.UpdateDataViewFailed]
+Description = "Update Data Views Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.MarshalViewAttrFailed]
+Description = "Marshal View Attribute Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.UnMarshalViewAttrFailed]
+Description = "UnMarshal View Attribute Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.ConvertBaseFieldsToViewFieldsFailed]
+Description = "Convert BaseFields To ViewFields Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.GetDataViewIDsByNamesFailed]
+Description = "Get Logical View IDs By Names Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.GetDataViewsByGroupIDFailed]
+Description = "Get Data Views By Group ID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.GetSimpleDataViewMapByNamesFailed]
+Description = "An internal server error occurred while getting the mappings between Logical View Name and Simple Logical View"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.GetDetailedDataViewMapByIDsFailed]
+Description = "An internal server error occurred while getting the mappings between Logical View ID and Detailed Logical View"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.GetSimpleDataViewMapByIDsFailed]
+Description = "An internal server error occurred while getting the mappings between Logical View ID and Simple Logical View"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.UpdateDataViewRealTimeStreamingFailed]
+Description = "Update Logical View Real-time Streaming Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.UpdateDataViewsGroupFailed]
+Description = "Update Data Views Group Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.GetJobsByDataViewIDsFailed]
+Description = "Get Jobs by Logical View IDs Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.BeginDbTransactionFailed]
+Description = "Begin Database Transaction Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.CreateDataModelJobFailed]
+Description = "Create Job Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.DeleteDataModelJobFailed]
+Description = "Delete Job Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataView.InternalError.CheckJobConfigChanged]
+Description = "Check Job Config Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+
+# 逻辑视图分组
+[DataModel.DataViewGroup.Existed.GroupName]
+Description = "Same Logical View Group Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InvalidParameter.Builtin]
+Description = "Invalid Logical View Group Query Parameter 'builtin'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InvalidParameter.DeleteViews]
+Description = "Invalid Delete Views"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InvalidParameter.GroupName]
+Description = "Invalid Group Name"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InvalidParameter.RequestBody]
+Description = "Invalid Request Body"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.LengthExceeded.GroupName]
+Description = "The Length of Group Name Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.NullParameter.GroupID]
+Description = "Group ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.NullParameter.GroupName]
+Description = "Group Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.ForbiddenBuiltinGroupID]
+Description = "Builtin Group ID Is Forbidden"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.ForbiddenBuiltinGroupName]
+Description = "Builtin Group Name Is Forbidden"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.GroupNotEmpty]
+Description = "The Group Is Not Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.GroupNotFound]
+Description = "The Group Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InternalError.BeginDBTransactionFailed]
+Description = "Begin Database Transaction Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InternalError.CheckGroupExistByNameFailed]
+Description = "Check Group Exists By Name Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InternalError.CreateGroupFailed]
+Description = "Create Group Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InternalError.DeleteDataViewsInGroupFailed]
+Description = "Delete Data Views In Group Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InternalError.DeleteGroupFailed]
+Description = "Delete Group Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InternalError.GetGroupByIDFailed]
+Description = "Get Group By ID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InternalError.GetGroupsTotalFailed]
+Description = "Get Logical View Groups Total Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InternalError.GetViewsByGroupIDFailed]
+Description = "Get Views By Group ID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InternalError.ListGroupsFailed]
+Description = "List Groups Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewGroup.InternalError.UpdateGroupFailed]
+Description = "Update Group Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+# 行列规则
+[DataModel.DataViewRowColumnRule.ExistByName]
+Description = "Logical View Row Column Rule Name Already Exist"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewRowColumnRule.LengthExceeded.RuleName]
+Description = "Logical View Row Column Rule Name Length Out of Limit"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewRowColumnRule.NullParameter.RuleID]
+Description = "Logical View Row Column Rule ID Is Empty"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewRowColumnRule.NullParameter.RuleName]
+Description = "Logical View Row Column Rule Name Is Empty"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.DataViewRowColumnRule.NullParameter.ViewID]
+Description = " View ID Of Logical View Row Column Rule Is Empty"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"

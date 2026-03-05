@@ -1,0 +1,592 @@
+# MetricModel
+[DataModel.MetricModel.AggregationNotExisted]
+Description = "Aggregation field Not Existed In Vega Logic View"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.AnalysisDimensionNotExisted]
+Description = "Analysis Dimension Not Existed In Vega Logic View"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter]
+Description = "Invalid Request Paramter"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.ModelNameExisted]
+Description = "Same Metric Model Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.IDExisted]
+Description = "Same ID Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.CombinationNameExisted]
+Description = "Same Metric Model Combination Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.OrderByFieldNotExisted]
+Description = "Order By Field Not Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.ModelName]
+Description = "Metric Model Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.OrderByDirection]
+Description = "Order By Direction Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.OrderByName]
+Description = "Order Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.MetricType]
+Description = "Metric Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.DependMetricModel]
+Description = "Depend Metric Model Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.DateField]
+Description = "Data Field Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.DataSource]
+Description = "Data Source Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.DataSourceID]
+Description = "Data Source ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.DerivedCondition]
+Description = "Derived Condition Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.DataView]
+Description = "Data View Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.QueryType]
+Description = "Query Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.Formula]
+Description = "Formula Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.FormulaConfig]
+Description = "Formula Config Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.HavingConditionName]
+Description = "Having Condition Name Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.HavingConditionOperation]
+Description = "Having Condition Operation Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.MeasureField]
+Description = "Measure Field Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.UnitType]
+Description = "Unit Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.Unit]
+Description = "Unit Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.LengthExceeded.ModelName]
+Description = "The Length of Model Name Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.CountExceeded.TagTotal]
+Description = "Number of Tags Exceed 5"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.ModelID]
+Description = "Invalid Model ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.OrderByDirection]
+Description = "Invalid Order By Direction"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.Formula]
+Description = "Invalid Formula"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.Group]
+Description = "Invalid Group"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.DateField]
+Description = "Invalid Date Field"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.DateFormat]
+Description = "Invalid Date Format"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.DataSourceType]
+Description = "Invalid Data Source Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.DerivedCondition]
+Description = "Invalid Derived Condition"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.IncludeView]
+Description = "Invalid Query Param 'include_view'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.MeasureField]
+Description = "Invalid Measure Field"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.MeasureFieldNotExists]
+Description = "Measure Field Not Exists In Data View"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.UnitType]
+Description = "Invalid Unit Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.UnsupportMetricType]
+Description = "Unsupported Metric Type."
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.UnsupportQueryType]
+Description = "Unsupported Query Type."
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.UnsupportHavingConditionOperation]
+Description = "Unsupported Having Condition Operation."
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.Duplicated.ModelName]
+Description = "Same Model Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.Duplicated.ModelIDInFile]
+Description = "Same Metric Model ID Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.Duplicated.CombinationName]
+Description = "Same Combination Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.Duplicated.TaskStep]
+Description = "Same Combination step and filters Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.MetricModelNotFound]
+Description = "The Metric Model Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.MetricTaskNotFound]
+Description = "The Metric Task Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.MeasureName]
+Description = "Measure Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.LengthExceeded.MeasureName]
+Description = "The Length of Measure Name Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.MeasureName]
+Description = "Measure Name Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.Duplicated.MeasureName]
+Description = "Same Measeure Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.TaskName]
+Description = "Task Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.CountExceeded.TaskTotal]
+Description = "Number of Tasks Exceed 1"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.LengthExceeded.TaskName]
+Description = "The Length of Task Name Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.DateFieldNotExisted]
+Description = "Date Field Not Existed In Vega Logic View"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.Duplicated.TaskName]
+Description = "Some Task Name Duplicated"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.TaskNameExisted]
+Description = "Same Task Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.Schedule]
+Description = "Schedule Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.ScheduleType]
+Description = "Schedule Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.SQLAggrExpression]
+Description = "SQL Aggregation Expression Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.SQLConfig]
+Description = "SQL Config Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.SQLExpression]
+Description = "SQL Expression Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.ScheduleType]
+Description = "Schedule Type Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.FormulaConfig]
+Description = "Formula Config Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.SQLAggrExpression]
+Description = "SQL Aggregation Expression Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.SQLCondition]
+Description = "SQL Condition Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.ScheduleExpression]
+Description = "Schedule Expression Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.ScheduleExpression]
+Description = "Schedule Expression Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.FilterName]
+Description = "Filter Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.FilterOperation]
+Description = "Filter Operation Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.FilterOperation]
+Description = "Filter Operation Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.FilterValue]
+Description = "Filter Value Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.FilterValue]
+Description = "Filter Value Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.TimeWindows]
+Description = "Time Windows Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.TimeWindows]
+Description = "Time Windows Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.Duplicated.TimeWindows]
+Description = "Same Time Windows Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.GroupByFieldNotExisted]
+Description = "Group By Field Not Existed In Vega Logic View"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.Step]
+Description = "Step Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.Step]
+Description = "Step Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.NullParameter.IndexBase]
+Description = "Index Base Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.Duplicated.IndexBase]
+Description = "Same Index Base Exists in the Tasks"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InvalidParameter.RetraceDuration]
+Description = "Retrace Duration Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.LengthExceeded.TaskComment]
+Description = "The Length of Task Comment Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError]
+Description = "Internal Error"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.GenerateIDFailed]
+Description = "Generate Distributed ID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.GetModelByIDFailed]
+Description = "Get Metric Model by ID Failed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.GetModelIDByNameFailed]
+Description = "Get Metric Model ID by Group Name And Model Name Failed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.GetMetricTasksByModelIDsFailed]
+Description = "Get Metric Tasks By Model IDs Failed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.CheckMetricModelTaskExistByName]
+Description = "Check Metric Model Task Exist By Name Failed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.CheckModelIfExistFailed]
+Description = "Failed to Check If The Metric Model Name Exists"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.GetDataViewByIDFailed]
+Description = "Get Data View By ID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.GetDataViewQueryFiltersFailed]
+Description = "Get Data View Filters Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.GetDataViewByNameFailed]
+Description = "Get Data View By Name Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.CheckFormulaFailed]
+Description = "Check Formula Validation Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.MeasureNameRuleCompileFailed]
+Description = "Measure Name Rule Compile Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.CheckDuplicateMeasureNameFailed]
+Description = "Check Duplicate Measure Name Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.BeginTransactionFailed]
+Description = "Begin Transaction Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.GetSimpleIndexBasesByTypesFailed]
+Description = "Get Simple Index Bases By Types Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModel.InternalError.GetMetricTaskByIDFailed]
+Description = "Get Metric Task By ID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+
+# MetricModelGroup
+[DataModel.MetricModelGroup.InvalidParameter]
+Description = "Invalid Request Paramter"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InvalidParameter.Builtin]
+Description = "Invalid Builtin"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InvalidParameter.Force]
+Description = "Invalid Force"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InvalidParameter.GroupID]
+Description = "Invalid GroupID"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.GroupNameExisted]
+Description = "Same Metric Model Group Name Existed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.NullParameter.GroupName]
+Description = "GroupName Is Empty"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.LengthExceeded.GroupName]
+Description = "The Length of Group Name Out of Limit"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.GroupNotFound]
+Description = "The Group Does Not Exist"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError]
+Description = "InternalError"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError.GenerateIDFailed]
+Description = "Generate Distributed ID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError.GetGroupByIDFailed]
+Description = "Get Metric Model Group By GroupID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError.CheckGroupIfExistFailed]
+Description = "Failed to Check If The Metric Model Group Name Exists"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError.GetGroupsTotalFailed]
+Description = "Get Data View Groups Total Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError.GetMetricModelGroupIDByNameFailed]
+Description = "Failed to Get Metric Model Group ID By Name"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.InternalError.ListGroupsFailed]
+Description = "List Groups Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.GroupNotEmpty]
+Description = "The Group Is Not Empty"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.ForbiddenBuiltinGroupID]
+Description = "Builtin Group ID Is Forbidden"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.MetricModelGroup.ForbiddenDeleteBuiltinGroup]
+Description = "Delete Builtin Group Is Forbidden"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"

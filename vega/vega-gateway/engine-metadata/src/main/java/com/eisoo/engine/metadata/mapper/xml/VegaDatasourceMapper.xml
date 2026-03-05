@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eisoo.engine.metadata.mapper.VegaDatasourceMapper">
+    <select id="selectByCatalogNameAndId" resultType="com.eisoo.engine.metadata.entity.VegaDatasourceEntity">
+        SELECT * FROM datasource
+        WHERE name = #{name}
+        <if test="id != null">
+            AND id != #{id}
+        </if>
+    </select>
+
+    <update id="updateById"  parameterType="com.eisoo.engine.metadata.entity.VegaDatasourceEntity">
+        UPDATE datasource
+        <set>
+            <if test="entity.name != null">name = #{entity.name},</if>
+            <if test="entity.catalogName != null">catalog_name = #{entity.catalogName},</if>
+            <if test="entity.sourceType != null">source_type = #{entity.sourceType},</if>
+            <if test="entity.type != null">`type` = #{entity.type},</if>
+            <if test="entity.typeName != null">type_name = #{entity.typeName},</if>
+            <if test="entity.infoSystemId != null">info_system_id = #{entity.infoSystemId},</if>
+            <if test="entity.databaseName != null">database_name = #{entity.databaseName},</if>
+            <if test="entity.schema != null">`schema` = #{entity.schema},</if>
+            <if test="entity.host != null">host = #{entity.host},</if>
+            <if test="entity.port != null">port = #{entity.port},</if>
+            <if test="entity.username != null">username = #{entity.username},</if>
+            <if test="entity.password != null">password = #{entity.password},</if>
+            <if test="entity.excelProtocol != null">excel_protocol = #{entity.excelProtocol},</if>
+            <if test="entity.excelBase != null">excel_base = #{entity.excelBase},</if>
+            <if test="entity.dataViewSource != null">data_view_source = #{entity.dataViewSource},</if>
+            <if test="entity.status != null">status = #{entity.status},</if>
+            <if test="entity.metadataTaskId != null">metadata_task_id = #{entity.metadataTaskId},</if>
+            <if test="entity.updatedByUid != null">updated_by_uid = #{entity.updatedByUid},</if>
+            <if test="entity.updatedAt != null">updated_at = #{entity.updatedAt},</if>
+            <if test="entity.token != null">token = #{entity.token}</if>
+        </set>
+        WHERE id = #{entity.id}
+    </update>
+
+    <select id="selectPage" resultType="com.eisoo.engine.metadata.entity.VegaDatasourceEntity">
+        SELECT * FROM datasource
+        WHERE name != #{excludedName}
+        <if test="keyword != null and keyword != ''">
+            AND (name LIKE CONCAT('%', #{keyword}, '%') OR database_name LIKE CONCAT('%', #{keyword}, '%'))
+        </if>
+        <if test="type != null and type != ''">
+            AND type_name = #{type}
+        </if>
+        ORDER BY #{sortOrder} #{direction}
+        <if test="limit > 0">
+            LIMIT #{limit} OFFSET #{offset}
+        </if>
+    </select>
+
+    <select id="selectCount" resultType="long">
+        SELECT COUNT(*) FROM datasource
+        WHERE name != #{excludedName}
+        <if test="keyword != null and keyword != ''">
+            AND (name LIKE CONCAT('%', #{keyword}, '%') OR database_name LIKE CONCAT('%', #{keyword}, '%'))
+        </if>
+        <if test="type != null and type != ''">
+            AND type_name = #{type}
+        </if>
+    </select>
+
+    <insert id="insert" parameterType="com.eisoo.engine.metadata.entity.VegaDatasourceEntity">
+        INSERT INTO datasource (
+            id, data_source_id, name, catalog_name, source_type, `type`, type_name, info_system_id, database_name, `schema`, host, port, username, password, excel_protocol, excel_base, data_view_source, status, metadata_task_id, created_by_uid, created_at, updated_by_uid, updated_at, token
+        ) VALUES (
+            #{entity.id}, #{entity.dataSourceId}, #{entity.name}, #{entity.catalogName}, #{entity.sourceType}, #{entity.type}, #{entity.typeName}, #{entity.infoSystemId}, #{entity.databaseName}, #{entity.schema}, #{entity.host}, #{entity.port}, #{entity.username}, #{entity.password}, #{entity.excelProtocol}, #{entity.excelBase}, #{entity.dataViewSource}, #{entity.status}, #{entity.metadataTaskId}, #{entity.createdByUid}, #{entity.createdAt}, #{entity.updatedByUid}, #{entity.updatedAt}, #{entity.token}
+        )
+    </insert>
+</mapper>

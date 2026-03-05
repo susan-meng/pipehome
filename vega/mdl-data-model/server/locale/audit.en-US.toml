@@ -1,0 +1,60 @@
+# 审计日志-loglevel
+ID_AUDIT_LEVEL_INFO = "Info"
+
+ID_AUDIT_LEVEL_WARNING = "Alert"
+
+# 审计日志-logtype
+ID_AUDIT_ACCESS_LOG = "Access Log"
+
+ID_AUDIT_MANAGEMENT_LOG = "Management Log"
+
+ID_AUDIT_ACTION_LOG = "Action Log"
+
+# 审计日志-action
+ID_AUDIT_ACTION_CREATE = "Create"
+
+ID_AUDIT_ACTION_DELETE = "Delete"
+
+ID_AUDIT_ACTION_UPDATE = "Modify"
+
+ID_AUDIT_ACTION_EXECUTE = "Execute"
+
+ID_AUDIT_ACTION_ALLOW = "Allow"
+
+ID_AUDIT_ACTION_NOT_ALLOW = "Not Allow"
+
+
+# 审计日志-结果
+ID_AUDIT_SUCCESS = "Success"
+
+ID_AUDIT_FAILED = "Failure"
+
+# 审计日志-对象类型
+ID_AUDIT_ARCHITECTURE_MODEL = "Architecture Model"
+
+ID_AUDIT_DATA_DICT = "Data Dictionary"
+
+ID_AUDIT_DATA_DICT_ITEM = "Data Dictionary Item"
+
+ID_AUDIT_DATA_VIEW = "Data View"
+
+ID_AUDIT_DATA_VIEW_GROUP = "Data View Group"
+
+ID_AUDIT_REAL_TIME_STREAMING = "Real-time Streaming"
+
+ID_AUDIT_EVENT_MODEL = "Event Model"
+
+ID_AUDIT_METRIC_MODEL = "Metric Model"
+
+ID_AUDIT_METRIC_MODEL_GROUP = "Metric Model Group"
+
+ID_AUDIT_DATA_CONNECTION = "Data Connection"
+
+ID_AUDIT_TRACE_MODEL = "Trace Model"
+
+ID_AUDIT_OBJECTIVE_MODEL = "Objective Model"
+
+# 审计日志-公共部分
+ID_AUDIT_UNKNOWN_USER = "Unknown User"
+
+ID_AUDIT_UNKNOWN_IP = "Unknown IP"

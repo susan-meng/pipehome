@@ -1,0 +1,239 @@
+[Uniquery.DataView.CountExceeded.Filters]
+Description = "过滤条件个数超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.FieldTypeConflict]
+Description = "存在字段类型冲突"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidFieldPermission.Sort]
+Description = "排序字段不在视图字段列表里"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidFilterField.FieldNotInView]
+Description = "过滤器使用的字段不在当前视图的字段列表中"
+Solution = "请检查过滤器的设置，确保所指定的字段在视图中存在。"
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.AllowNonExistField]
+Description = "allow_non_exist_field参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.DataScope]
+Description = "data_scope参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.DataSource]
+Description = "数据源参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.Direction]
+Description = "指定的排序方向无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.FieldScope]
+Description = "数据视图字段范围无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.Filters]
+Description = "过滤器配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.Format]
+Description = "视图数据的输出格式无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.IncludeView]
+Description = "视图数据包含视图字段参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.PitKeepAlive]
+Description = "Point In Time keep_alive 参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.QueryType]
+Description = "查询类型参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.Scroll]
+Description = "数据视图 Scroll 参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.Sort]
+Description = "排序字段和方向不能为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InvalidParameter.ViewIDs]
+Description = "数据视图 ID 无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.MissingRequiredField]
+Description = "缺少必要字段 '{{.FieldName}}'"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.NullParameter.Fields]
+Description = "字段参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.NullParameter.IndexBaseNames]
+Description = "索引库名称为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.NullParameter.Scroll]
+Description = "Scroll 参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.UnsupportDataSourceType]
+Description = "不支持的数据源类型"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.BinaryFieldSortNotSupported]
+Description = "Binary 类型的字段不支持排序"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.OffsetNotAllowedWithScroll]
+Description = "当有 scroll 参数时，offset 参数不可传递"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.DataViewNotFound]
+Description = "视图不存在"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.PointInTimeSearchContextNotFound]
+Description = "Point In Time 搜索上下文不存在"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.ConvertSearchAfterToDSLFailed]
+Description = "将search_after参数转成DSL失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.ConvertToDSLFailed]
+Description = "转成DSL失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.ConvertToViewUniResponseFailed]
+Description = "转成视图统一结构失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.CreatePointInTimeFailed]
+Description = "创建 Point In Time 失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.DeletePointInTimeFailed]
+Description = "删除 Point In Time 失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.FetchDataFromVegaFailed]
+Description = "从 vega-gateway-pro 服务或数据连接服务获取数据失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.GetDataViewByIDFailed]
+Description = "通过 ID 获取视图详情失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.GetDocumentsFailed]
+Description = "获取文档失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.GetIndexBaseByTypeFailed]
+Description = "获取索引库详情失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.GetIndicesFailed]
+Description = "获取索引列表失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.GetPitIdFailed]
+Description = "获取 Point In Time ID 失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.GetSearchAfterValueFailed]
+Description = "获取 search_after 值失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.GetScrollIdFailed]
+Description = "获取翻页 ID 失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.GetTotalFailed]
+Description = "获取数据总量失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.InvalidReferenceView]
+Description = "引用的原子视图无效"
+Solution = "请检查引用的原子视图是否有效。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.LoadIndexShardsFailed]
+Description = "获取索引的分片信息失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.MarshalFailed]
+Description = "序列化失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.ProcessDocFailed]
+Description = "处理单个文档失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.SetDocIdFailed]
+Description = "视图数据添加文档 ID 失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.SetDocIndexFailed]
+Description = "视图数据添加文档的索引名称失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.SubmitTaskFailed]
+Description = "提交并发处理文档任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.DataView.InternalError.UnmarshalFailed]
+Description = "反序列化失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"

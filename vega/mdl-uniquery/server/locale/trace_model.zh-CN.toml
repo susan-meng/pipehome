@@ -1,0 +1,66 @@
+
+# 错误码: 链路模型
+[Uniquery.TraceModel.InvalidParameter.ModelID]
+Description = "链路模型ID无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.TraceModelNotFound]
+Description = "链路模型不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.TraceNotFound]
+Description = "Trace不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.SpanNotFound]
+Description = "Span不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.InternalError.GetTraceModelByIDFailed]
+Description = "根据链路模型ID获取对象时, 服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.InternalError.SimulateCreateTraceModelFailed]
+Description = "模拟创建链路模型对象时, 服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.InternalError.SimulateUpdateTraceModelFailed]
+Description = "模拟修改链路模型对象时, 服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.InternalError.SplitSpanIDFailed]
+Description = "分割SpanID字符串时, 服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.InternalError.GetUnderlyingDataSouceTypeFailed]
+Description = "获取底层数据来源类型时, 造成服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.InternalError.GetDataConnectionByIDFailed]
+Description = "根据数据连接ID获取对象时, 服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.InternalError.ProcessDataConnectionFailed]
+Description = "处理数据连接对象时, 服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.InternalError.GetTingYunTraceListFailed]
+Description = "获取听云链路列表时, 服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.TraceModel.InternalError.GetTingYunTraceDetailFailed]
+Description = "获取听云链路详情时, 服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"

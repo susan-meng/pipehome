@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eisoo.engine.metadata.mapper.TblsMapper">
+
+    <resultMap type="com.eisoo.engine.metadata.entity.TblsEntity" id="baseMap">
+        <result property="id" column="id"/>
+        <result property="databaseId" column="database_id"/>
+        <result property="tableName" column="table_name"/>
+        <result property="type" column="type"/>
+        <result property="viewOriginalText" column="view_original_text"/>
+        <result property="createTime" column="create_time"/>
+        <result property="owner" column="owner"/>
+        <result property="comment" column="comment"/>
+    </resultMap>
+
+    <select id="queryList" resultType="com.eisoo.engine.utils.vo.ViewTableVo">
+        select vvm.table_name as viewName,
+        vc.catalog_name     as catalogName,
+        vc.database_name    as `schema`,
+        vp.param_value    as connectorName
+        from hetu_tbls vvm
+        left join hetu_dbs vc on vvm.database_id = vc.id
+        left join hetu_catalog_params vp on vp.catalog_id = vc.id
+        where 1 = 1
+        <if test="catalogName != null and catalogName != ''">
+            AND vc.catalog_name LIKE CONCAT('%', #{catalogName}, '%')
+        </if>
+        <if test="schemaName != null and schemaName != ''">
+            AND vc.database_name LIKE CONCAT('%', #{schemaName}, '%')
+        </if>
+        <if test="viewName != null and viewName != ''">
+            AND vvm.table_name LIKE CONCAT('%', #{viewName}, '%')
+        </if>
+    </select>
+
+    <select id="queryAll" resultType="com.eisoo.engine.utils.vo.ViewTableVo">
+        select vvm.table_name as viewName,
+        vvm.type as type,
+        vc.catalog_name     as catalogName,
+        vc.database_name    as `schema`,
+        vp.param_value    as connectorName
+        from hetu_tbls vvm
+        left join hetu_dbs vc on vvm.database_id = vc.id
+        left join hetu_catalog_params vp on vp.catalog_id = vc.id
+        where 1 = 1
+        <if test="catalogName != null and catalogName != ''">
+            AND vc.catalog_name LIKE CONCAT('%', #{catalogName}, '%')
+        </if>
+        <if test="schemaName != null and schemaName != ''">
+            AND vc.database_name LIKE CONCAT('%', #{schemaName}, '%')
+        </if>
+        <if test="viewName != null and viewName != ''">
+            AND vvm.table_name LIKE CONCAT('%', #{viewName}, '%')
+        </if>
+    </select>
+
+    <delete id="deleteByView">
+        delete
+        from hetu_tbls
+        where table_name = #{viewName}
+          and database_id in (
+            select id
+            from hetu_dbs
+            where catalog_name = #{catalogName}
+        )
+    </delete>
+
+    <select id="existView" resultType="java.lang.String">
+        select vvm.table_name as viewName
+        from hetu_tbls vvm
+                 left join hetu_dbs vc on vvm.database_id = vc.id
+        where 1 = 1
+          and vvm.table_name = #{viewName}
+          and vc.catalog_name = #{catalogName}
+            limit 1
+    </select>
+
+    <select id="existViewByCatalog" resultType="com.eisoo.engine.utils.vo.ViewTableVo">
+        select vvm.table_name as viewName,
+               vc.catalog_name     as catalogName,
+               vc.database_name    as `schema`,
+               vp.param_value    as connectorName
+        from hetu_tbls vvm
+                 right join hetu_dbs vc on vvm.database_id = vc.id
+                 left join hetu_catalog_params vp on vp.catalog_id = vc.id
+        where 1 = 1
+          and vc.catalog_name = #{catalogName}
+            limit 1
+    </select>
+
+    <update id="updateView">
+        update hetu_tbls
+        set owner=#{user}
+        where 1 = 1
+          and table_name = #{viewName}
+          and database_id in (
+            select id
+            from hetu_dbs
+            where catalog_name = #{catalogName}
+        )
+    </update>
+
+
+</mapper>

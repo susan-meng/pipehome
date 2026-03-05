@@ -1,0 +1,342 @@
+# Common
+[DataModel.InvalidParameter.OverrideMethod]
+Description = "Invalid Override Method"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.RequestBody]
+Description = "Invalid Request Body"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ConflictParameter.NameAndNamePatternCoexist]
+Description = "The name and name_pattern parameters cannot coexist."
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.Offset]
+Description = "Invalid Offset"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.Limit]
+Description = "Invalid Pagination Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.ModuleType]
+Description = "Invalid Module Name"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.Direction]
+Description = "Invalid Sort Direction"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.Sort]
+Description = "Invalid Sort Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.Tags]
+Description = "The Passed Tag Array Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.CountExceeded.Tags]
+Description = "The Number Of Tags Exceeds The Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.NullParameter.Tag]
+Description = "Some Tags Are Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.LengthExceeded.Tag]
+Description = "Some Tags Exceed The Length Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.Tag]
+Description = "Some Tags Are Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.LengthExceeded.Comment]
+Description = "The Length Of Comment Exceeds The Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.Filters]
+Description = "Invalid Filters Structure"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.Forbidden.FilterField]
+Description = "The filter field '__id' and '__routing' is not allowed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.NullParameter.FilterName]
+Description = "Filter Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.NullParameter.FilterOperation]
+Description = "Filter Operation Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.NullParameter.FilterValue]
+Description = "Filter Value Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.FilterValue]
+Description = "Invalid Filter Value"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.UnsupportFilterOperation]
+Description = "Unsupported Filter Operation"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidRequestHeader.ContentType]
+Description = "Invalid ContentType"
+Solution = "Please check the Http Header."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.ID]
+Description = "Invalid ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.ValueFrom]
+Description = "Invalid Filter Value From"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InternalError]
+Description = "Internal Server Error"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.BeginTransactionFailed]
+Description = "An internal server error occurred while initiating the transaction"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.CommitTransactionFailed]
+Description = "An internal server error occurred while committing the transaction"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.DataBaseError]
+Description = "An internal server error occurred while database operation"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.MarshalDataFailed]
+Description = "An internal server error occurred while marshaling data"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.UnmarshalDataFailed]
+Description = "An internal server error occurred while unmarshaling data"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.CheckPermissionFailed]
+Description = "An internal server error occurred while check permission"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.CreateResourcesFailed]
+Description = "An internal server error occurred while create resources"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.DeleteResourcesFailed]
+Description = "An internal server error occurred while delete resources"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.FilterResourcesFailed]
+Description = "An internal server error occurred while filter resources"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.UpdateResourceFailed]
+Description = "An internal server error occurred while update resource name"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.MQPublishMsgFailed]
+Description = "An internal server error occurred while mq publish message"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.InternalError.StartJobFailed]
+Description = "Start Job Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.InternalError.StopJobFailed]
+Description = "Stop Job Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.InternalError.UpdateJobFailed]
+Description = "Update Job Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+# DataTag
+[DataModel.InvalidParameter.DataTagName]
+Description = "Invalid Data Tag Name"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter.SimpleInfo]
+Description = "Invalid Information Parameter"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataTagNotFound]
+Description = "The Data Tag Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.InternalError.FailedToGetAllDataTagUserInfo]
+Description = "Get All Data Tag Users Failed."
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.InvalidParameter]
+Description = "Invalid Request Paramter"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+# errorcode: event-model
+[EventModel.InvalidParameter]
+Description = "Invalid Request Paramter"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.NullParameter.Schedule]
+Description = "Schedule Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.NullParameter.ScheduleType]
+Description = "Schedule Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.InvalidParameter.ScheduleType]
+Description = "Schedule Type Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.NullParameter.ScheduleExpression]
+Description = "Schedule Expression Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.InvalidParameter.ScheduleExpression]
+Description = "Schedule Expression Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.NullParameter.IndexBase]
+Description = "IndexBase Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.NullParameter.DataViewID]
+Description = "DataViewID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.InvalidParameter.BlockStrategy]
+Description = "BlockStrategy Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.InvalidParameter.RouteStrategy]
+Description = "RouteStrategy Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.InvalidParameter.TimeOut]
+Description = "TimeOut Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.InvalidParameter.FailRetryCount]
+Description = "FailRetryCount Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[EventModel.DataSourceIllegal]
+Description = "Data Source not exist"
+Solution = "Please check whether the data source is exist."
+ErrorLink = "None"
+
+[EventModel.DependentModelIllegal]
+Description = "dependent event model illegal"
+Solution = "Please change the dependent event model"
+ErrorLink = "None"
+
+[EventModel.RunModeIllegal]
+Description = "event model run mode illegal"
+Solution = "Please check the status of  event model"
+ErrorLink = "None"
+
+[EventModel.TaskSyncCreateFailed]
+Description = "The task of event model create failed"
+Solution = "please check the task config of event model"
+ErrorLink = "None"
+
+[EventModel.ModelNameExisted]
+Description = "Same Event Model Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[EventModel.RefByOther]
+Description = "Same Event Model has been ref by other event model "
+Solution = "Please check the dependence of event model which you want to access"
+ErrorLink = "None"
+
+[EventModel.EventModelNotFound]
+Description = "Event model not found"
+Solution = "Please check the parameter"
+ErrorLink = "None"
+
+[EventModel.InternalError]
+Description = "System Internal Error"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[EventModel.InternalError.GenerateIDFailed]
+Description = "Generate Distributed ID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[EventModel.InternalError.GetModelByIDFailed]
+Description = "Get Event Model by ID Failed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.EventModel.InternalError.BeginTransactionFailed]
+Description = "Begin Transaction Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.EventModel.InternalError.TaskBeingModified]
+Description = "The task is being modified"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"

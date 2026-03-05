@@ -1,0 +1,189 @@
+[DataModel.DataDict.InvalidParameter]
+Description = "数据字典参数绑定失败"
+Solution = "请检查数据字典的参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.DictNameExisted]
+Description = "数据字典名称已经存在"
+Solution = "请检查数据字典的参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.NullParameter.DictName]
+Description = "数据字典名称为空"
+Solution = "请输入数据字典名称"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.NullParameter.DictDimension]
+Description = "数据字典维度为空"
+Solution = "请输入数据字典维度"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.NullParameter.DictItemKey]
+Description = "数据字典项的维度键不能全为空"
+Solution = "请输入至少一个维度键的值"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.NullParameter.DictItemValue]
+Description = "数据字典项的维度值不能为空"
+Solution = "请输入字典项的维度值"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.Dict]
+Description = "数据字典参数"
+Solution = "请检查数据字典的参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.DictItems]
+Description = "数据字典项参数不合法"
+Solution = "请检查数据字典项参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.DictID]
+Description = "数据字典ID参数不合法"
+Solution = "请检查数据字典的参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.DictIDs]
+Description = "数据字典IDs参数不合法"
+Solution = "请检查数据字典的参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.DictDimension]
+Description = "数据字典维度参数不合法"
+Solution = "请检查数据字典维度参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.DictItemsFile]
+Description = "数据字典项导入文件不合法"
+Solution = "请检查数据字典项导入文件是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.FileExt]
+Description = "不支持的文件扩展名"
+Solution = "请检查数据字典项导入文件是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.Format]
+Description = "文件导出格式参数不合法"
+Solution = "请检查导出文件格式参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.ImportMode]
+Description = "导入模式参数不合法"
+Solution = "请检查数据字典项的导入模式参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.ItemID]
+Description = "数据字典项ID参数不合法"
+Solution = "请检查数据字典项的参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InvalidParameter.ItemIDs]
+Description = "数据字典项IDs参数不合法"
+Solution = "请检查数据字典项的参数"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.Duplicated.DictName]
+Description = "存在重复的数据字典名称"
+Solution = "请检查数据字典名称参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.Duplicated.DictDimension]
+Description = "存在重复的数据字典维度名称"
+Solution = "请检查数据字典维度名称参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.Duplicated.DictItemKey]
+Description = "存在重复的数据字典项"
+Solution = "请检查数据字典项参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.Duplicated.DictItemKeyInFile]
+Description = "文件内存在重复的数据字典项：'{{.ItemKey}}'"
+Solution = "请检查导入的文件内的数据字典项参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.LengthExceeded.DictName]
+Description = "数据字典名称长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.LengthExceeded.DictComment]
+Description = "数据字典描述长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.LengthExceeded.DictDimensionName]
+Description = "数据字典维度名称参数长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.LengthExceeded.DictItemKey]
+Description = "数据字典项维度键长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.LengthExceeded.DictItemValue]
+Description = "数据字典项维度属性长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.LengthExceeded.DictItemComment]
+Description = "数据字典项描述长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.BadRequest.ParseCSVFileFailed]
+Description = "解析csv文件失败"
+Solution = "请检查csv文件格式是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.BadRequest.ParseXlsxFileFailed]
+Description = "解析xlsx文件失败"
+Solution = "请检查xlsx文件格式是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.BadRequest.ItemsAreEmpty]
+Description = "导入的数据内容为空"
+Solution = "请检查导入文件格式是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.DictNotFound]
+Description = "数据字典不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.DictItemNotFound]
+Description = "数据字典项不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InternalError]
+Description = "数据字典内部错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InternalError.BeginTransactionFailed]
+Description = "数据字典开启事务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InternalError.CommitTransactionFailed]
+Description = "数据字典提交事务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InternalError.ExportCSVFileFailed]
+Description = "导出csv文件失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InternalError.ExportXlsxFileFailed]
+Description = "导出xlsx文件失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataDict.InternalError.RollbackTransactionFailed]
+Description = "数据字典回滚事务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"

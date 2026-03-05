@@ -1,0 +1,25 @@
+# 错误码: 事件模型
+[Uniquery.EventModel.InvalidParameter]
+Description = "事件模型查询参数错误"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.EventModel.EventModelNotFound]
+Description = "事件模型不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.EventModel.EventNotFound]
+Description = "事件不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.EventModel.InternalError]
+Description = "事件模型服务器内部错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.EventModel.InternalError.GetEventModelByIdFailed]
+Description = "获取事件模型详情失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"

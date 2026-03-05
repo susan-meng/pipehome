@@ -1,0 +1,186 @@
+# 错误码: 目标模型
+[Uniquery.ObjectiveModel.InvalidParameter]
+Description = "请求参数不合法"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InvalidParameter.IgnoringMemoryCache]
+Description = "是否忽略内存缓存无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InvalidParameter.IgnoringStoreCache]
+Description = "是否忽略持久化缓存下来的数据无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InvalidParameter.IncludeModel]
+Description = "是否包含模型信息无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.UnsupportObjectiveType]
+Description = "不支持的目标类型"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.ObjectiveType]
+Description = "目标类型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.ObjectiveConfig]
+Description = "目标配置为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.Objective]
+Description = "目标为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InvalidParameter.Objective]
+Description = "目标无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.Period]
+Description = "周期为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.GoodMetricModel]
+Description = "良好指标为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.GoodMetricModelID]
+Description = "良好指标ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.TotalMetricModel]
+Description = "总指标为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.TotalMetricModelID]
+Description = "总指标ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.ObjectiveUnit]
+Description = "目标单位为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.ComprehensiveMetricModels]
+Description = "综合计算指标为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.ComprehensiveMetricModelID]
+Description = "综合计算指标ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.ComprehensiveWeight]
+Description = "综合计算权重为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InvalidParameter.ComprehensiveWeight]
+Description = "综合计算权重无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.NullParameter.AdditionalMetricModelID]
+Description = "附加指标ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+
+[Uniquery.ObjectiveModel.InvalidParameter.ObjectiveConfig]
+Description = "目标配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InvalidParameter.MetricModelID]
+Description = "指标模型ID无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InvalidParameter.StatusRanges]
+Description = "状态阈值配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InvalidParameter.ObjectiveUnit]
+Description = "目标单位无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.UnsupportQuery]
+Description = "不支持的查询"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.CountExceeded.ComprehensiveMetricModelsTotal]
+Description = "综合计算指标数量超出10个"
+Solution = "请检查综合计算指标数量是否在允许范围内。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.CountExceeded.AdditionalMetricModelsTotal]
+Description = "附加指标数量超出5个"
+Solution = "请检查附加指标数量是否在允许范围内。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.CountExceeded.StatusTotal]
+Description = "关联的指标模型的单位不尽相同"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.AssociateMetricModelsUnit.Different]
+Description = "指标模型单位与目标单位不匹配"
+Solution = "请检查指标模型单位是否与目标单位匹配。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.ObjectiveModelNotFound]
+Description = "目标模型不存在"
+Solution = "请检查目标模型是否存在。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.MetricModelNotFound]
+Description = "指标模型不存在"
+Solution = "请检查指标模型是否存在。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InternalError]
+Description = "内部错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InternalError.SubmitGetMetricDataTaskFailed]
+Description = "提交获取指标数据任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InternalError.MetricTimePointsNotEqual]
+Description = "指标时间点不一致"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.InternalError.AssertFloat64Failed]
+Description = "指标数据转换到float64失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InternalError.GetMetricModelsFailed]
+Description = "获取指标模型信息失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.ObjectiveModel.InternalError.GetObjectiveModelByIdFailed]
+Description = "获取目标模型失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"  

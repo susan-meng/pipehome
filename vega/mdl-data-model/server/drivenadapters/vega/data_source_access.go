@@ -1,0 +1,212 @@
+// Copyright The kweaver.ai Authors.
+//
+// Licensed under the Apache License, Version 2.0.
+// See the LICENSE file in the project root for details.
+
+package vega
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"sync"
+
+	"data-model/common"
+	"data-model/interfaces"
+
+	"github.com/bytedance/sonic"
+	"github.com/kweaver-ai/TelemetrySDK-Go/exporter/v2/ar_trace"
+	"github.com/kweaver-ai/kweaver-go-lib/logger"
+	o11y "github.com/kweaver-ai/kweaver-go-lib/observability"
+	"github.com/kweaver-ai/kweaver-go-lib/rest"
+	"go.opentelemetry.io/otel/trace"
+)
+
+var (
+	dsAccessOnce sync.Once
+	dsAccess     interfaces.DataSourceAccess
+)
+
+type dataSourceAccess struct {
+	appSetting *common.AppSetting
+	httpClient rest.HTTPClient
+}
+
+func NewDataSourceAccess(appSetting *common.AppSetting) interfaces.DataSourceAccess {
+	dsAccessOnce.Do(func() {
+		dsAccess = &dataSourceAccess{
+			appSetting: appSetting,
+			//httpClient:  common.NewOAuth2HTTPClient(),
+			httpClient: common.NewHTTPClient(),
+		}
+	})
+
+	return dsAccess
+}
+
+// 调用内部接口，根据id查询数据源
+func (dsa *dataSourceAccess) GetDataSourceByID(ctx context.Context, id string) (datasource *interfaces.DataSource, err error) {
+	ctx, span := ar_trace.Tracer.Start(ctx, "get vega data source by id", trace.WithSpanKind(trace.SpanKindClient))
+	defer span.End()
+
+	urlStr := fmt.Sprintf("%s/%s", dsa.appSetting.VegaDatSourceUrl, id)
+
+	o11y.AddAttrs4InternalHttp(span, o11y.TraceAttrs{
+		HttpUrl:         urlStr,
+		HttpMethod:      http.MethodGet,
+		HttpContentType: rest.ContentTypeJson,
+	})
+
+	accountInfo := interfaces.AccountInfo{}
+	if ctx.Value(interfaces.ACCOUNT_INFO_KEY) != nil {
+		accountInfo = ctx.Value(interfaces.ACCOUNT_INFO_KEY).(interfaces.AccountInfo)
+	}
+	headers := map[string]string{
+		interfaces.CONTENT_TYPE_NAME:        interfaces.CONTENT_TYPE_JSON,
+		interfaces.HTTP_HEADER_ACCOUNT_ID:   accountInfo.ID,
+		interfaces.HTTP_HEADER_ACCOUNT_TYPE: accountInfo.Type,
+	}
+
+	respCode, respData, err := dsa.httpClient.GetNoUnmarshal(ctx, urlStr, nil, headers)
+	logger.Debugf("get %s finished, response code is %d, result is %s, error is %v", urlStr, respCode, respData, err)
+
+	if err != nil {
+		logger.Errorf("DrivenMetadata GetDataSourceByID %s request failed: %v", id, err)
+
+		o11y.AddHttpAttrs4Error(span, respCode, "InternalError", "Http Get Failed")
+		o11y.Error(ctx, fmt.Sprintf("DrivenMetadata GetDataSourceByID %s request failed: %v", id, err))
+
+		return nil, fmt.Errorf("DrivenMetadata GetDataSourceByID %s request failed: %v", id, err)
+	}
+
+	// 错误码结构是 code, description, detail，需要对错误码做转换
+	if respCode != http.StatusOK {
+		// 转成 baseerror. vega返回的错误码跟我们当前的不同，暂时先用
+		var vegaError VegaError
+		if err = sonic.Unmarshal(respData, &vegaError); err != nil {
+			logger.Errorf("DrivenMetadata GetDataSourceByID %s unmalshal VegaError failed: %v", id, err)
+
+			o11y.AddHttpAttrs4Error(span, respCode, "InternalError", "Unmalshal VegaError failed")
+			o11y.Error(ctx, fmt.Sprintf("Unmalshal VegaError %s failed: %v", id, err))
+
+			return nil, err
+		}
+		httpErr := &rest.HTTPError{HTTPCode: respCode,
+			BaseError: rest.BaseError{
+				ErrorCode:    vegaError.Code,
+				Description:  vegaError.Description,
+				ErrorDetails: vegaError.Detail,
+			}}
+		logger.Errorf("Get Vega DataSource %s Error: %v", id, httpErr.Error())
+
+		o11y.AddHttpAttrs4Error(span, respCode, "InternalError", "Http status is not 200")
+		o11y.Error(ctx, fmt.Sprintf("Get Vega DataSource %s failed: %v", id, vegaError))
+
+		return nil, fmt.Errorf("get Vega DataSource %s Error: %v", id, httpErr.Error())
+	}
+
+	if respData == nil {
+		// 添加异常时的 trace 属性
+		o11y.AddHttpAttrs4Ok(span, respCode)
+		// 记录模型不存在的日志
+		o11y.Warn(ctx, "Http response body is null")
+
+		return nil, nil
+	}
+
+	var res interfaces.DataSource
+	if err = sonic.Unmarshal(respData, &res); err != nil {
+		logger.Errorf("DrivenMetadata GetDataSourceByID %s sonic.Unmarshal error: %v", id, err)
+		o11y.AddHttpAttrs4Error(span, respCode, "InternalError", "Unmalshal vega data source failed")
+		o11y.Error(ctx, fmt.Sprintf("Unmalshal vega data source %s failed: %v", id, err))
+
+		return nil, err
+	}
+
+	o11y.AddHttpAttrs4Ok(span, respCode)
+	return &res, nil
+}
+
+// 调用内部接口，获取数据源列表
+func (dsa *dataSourceAccess) ListDataSources(ctx context.Context) (*interfaces.ListDataSourcesResult, error) {
+	ctx, span := ar_trace.Tracer.Start(ctx, "list vega data sources", trace.WithSpanKind(trace.SpanKindClient))
+	defer span.End()
+
+	urlStr := dsa.appSetting.VegaDatSourceUrl
+
+	o11y.AddAttrs4InternalHttp(span, o11y.TraceAttrs{
+		HttpUrl:         urlStr,
+		HttpMethod:      http.MethodGet,
+		HttpContentType: rest.ContentTypeJson,
+	})
+
+	accountInfo := interfaces.AccountInfo{}
+	if ctx.Value(interfaces.ACCOUNT_INFO_KEY) != nil {
+		accountInfo = ctx.Value(interfaces.ACCOUNT_INFO_KEY).(interfaces.AccountInfo)
+	}
+	headers := map[string]string{
+		interfaces.CONTENT_TYPE_NAME:        interfaces.CONTENT_TYPE_JSON,
+		interfaces.HTTP_HEADER_ACCOUNT_ID:   accountInfo.ID,
+		interfaces.HTTP_HEADER_ACCOUNT_TYPE: accountInfo.Type,
+	}
+
+	respCode, respData, err := dsa.httpClient.GetNoUnmarshal(ctx, urlStr, nil, headers)
+	logger.Debugf("get %s finished, response code is %d, error is %v", urlStr, respCode, err)
+
+	if err != nil {
+		logger.Errorf("DrivenMetadata ListDataSources request failed: %v", err)
+
+		o11y.AddHttpAttrs4Error(span, respCode, "InternalError", "Http Get Failed")
+		o11y.Error(ctx, fmt.Sprintf("DrivenMetadata ListDataSources request failed: %v", err))
+
+		return nil, fmt.Errorf("DrivenMetadata ListDataSources request failed: %v", err)
+	}
+
+	// 错误码结构是 code, description, detail，需要对错误码做转换
+	if respCode != http.StatusOK {
+		// 转成 baseerror. vega返回的错误码跟我们当前的不同，暂时先用
+		var vegaError VegaError
+		if err = sonic.Unmarshal(respData, &vegaError); err != nil {
+			logger.Errorf("unmalshal VegaError failed: %v", err)
+
+			o11y.AddHttpAttrs4Error(span, respCode, "InternalError", "Unmalshal VegaError failed")
+			o11y.Error(ctx, fmt.Sprintf("Unmalshal VegaError failed: %v", err))
+
+			return nil, err
+		}
+		httpErr := &rest.HTTPError{HTTPCode: respCode,
+			BaseError: rest.BaseError{
+				ErrorCode:    vegaError.Code,
+				Description:  vegaError.Description,
+				ErrorDetails: vegaError.Detail,
+			}}
+		logger.Errorf("List Vega DataSources Error: %v", httpErr.Error())
+
+		o11y.AddHttpAttrs4Error(span, respCode, "InternalError", "Http status is not 200")
+		o11y.Error(ctx, fmt.Sprintf("List Vega DataSources failed: %v", vegaError))
+
+		return nil, fmt.Errorf("list Vega DataSources Error: %v", httpErr.Error())
+	}
+
+	if respData == nil {
+		// 添加异常时的 trace 属性
+		o11y.AddHttpAttrs4Ok(span, respCode)
+		// 记录模型不存在的日志
+		o11y.Warn(ctx, "Http response body is null")
+
+		return nil, nil
+	}
+
+	var res interfaces.ListDataSourcesResult
+	if err = sonic.Unmarshal(respData, &res); err != nil {
+		logger.Errorf("DrivenMetadata ListDataSources sonic.Unmarshal error: %v", err)
+		o11y.AddHttpAttrs4Error(span, respCode, "InternalError", "Unmalshal vega data source failed")
+		o11y.Error(ctx, fmt.Sprintf("Unmalshal vega data source failed: %v", err))
+
+		return nil, err
+	}
+	logger.Debugf("list vega data sources result count is %d", len(res.Entries))
+
+	o11y.AddHttpAttrs4Ok(span, respCode)
+	return &res, nil
+}

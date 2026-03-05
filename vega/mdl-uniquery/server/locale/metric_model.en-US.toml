@@ -1,0 +1,360 @@
+# errorcode: MetricModel
+[Uniquery.MetricModel.AggregationNotExisted]
+Description = "Aggregation Field Not Existed In Vega Logic View"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.AnalysisDimensionNotExisted]
+Description = "Analysis Dimension Not Existed In Vega Logic View"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.DateFieldNotExisted]
+Description = "Date Field Not Existed In Vega Logic View"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.GroupByFieldNotExisted]
+Description = "Group By Field Not Existed In Vega Logic View"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter]
+Description = "Invalid Request"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.DataSourceType]
+Description = "Invalid Data Source Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.DerivedCondition]
+Description = "Invalid Derived Condition"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.MetricType]
+Description = "Metric Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.HavingConditionName]
+Description = "Having Condition Name Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.HavingConditionOperation]
+Description = "Having Condition Operation Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.OrderByDirection]
+Description = "Order By Direction Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.OrderByName]
+Description = "Order Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.DateField]
+Description = "Data Field Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.DataSource]
+Description = "Data Source Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.DataSourceID]
+Description = "Data Source ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None" 
+
+[Uniquery.MetricModel.NullParameter.DependMetricModel]
+Description = "Depend Metric Model Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.DerivedCondition]
+Description = "Derived Condition Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.QueryType]
+Description = "Query Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.RequestMetricsType]
+Description = "Request Metrics Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.SamePeriodCfg]
+Description = "Request Metrics Same Period Config Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.SamePeriodMethod]
+Description = "Same Period Method Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.SQLAggrExpression]
+Description = "SQL Aggr Expression Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.Formula]
+Description = "Formula Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.FormulaConfig]
+Description = "Formula Config Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.Step]
+Description = "Step Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.NullParameter.MeasureField]
+Description = "Measure Field Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.Step]
+Description = "Invalid Step"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.ModelID]
+Description = "Invalid Model ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.Time]
+Description = "Invalid Computation Time for Instant Query"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.LookBackDelta]
+Description = "Invalid Look Back Delta for Instant Query"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.FieldName]
+Description = "Invalid Field Name"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.FillNull]
+Description = "Invalid Fill Null"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.Formula]
+Description = "Invalid Formula"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.FormulaConfig]
+Description = "Invalid Formula Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.MeasureField]
+Description = "Invalid Measure Field for DSL Query"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.IgnoringHCTS]
+Description = "Invalid Ignoring HCTS"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.IgnoringStoreCache]
+Description = "Invalid Ignoring Store Cache"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.IgnoringMemoryCache]
+Description = "Invalid Ignoring Memory Cache"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.IncludeModel]
+Description = "Invalid Include Model"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.Offset]
+Description = "Invalid Offset"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.OrderByDirection]
+Description = "Invalid Order By Direction"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.RequestMetricsType]
+Description = "Invalid Request Metrics Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.SamePeriodMethod]
+Description = "Invalid Same Period Method"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.SamePeriodOffset]
+Description = "Invalid Same Period Offset"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.SamePeriodTimeGranularity]
+Description = "Invalid Same Period Time Granularity"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.SQLAggrExpression]
+Description = "Invalid SQL Aggregation Expression"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.SQLCondition]
+Description = "Invalid SQL Condition"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.SqlConfig]
+Description = "Invalid Sql Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvalidParameter.Limit]
+Description = "Invalid Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.UnsupportDataSourceType]
+Description = "Unsupported Data Source Type."
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.UnsupportMetricType]
+Description = "Unsupported Metric Type."
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.UnsupportQueryType]
+Description = "Unsupported Query Type."
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.UnsupportQuery]
+Description = "Unsupported Query"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.UnsupportHavingConditionOperation]
+Description = "Unsupported Having Condition Operation."
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.DataViewNotFound]
+Description = "The Data View Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.MetricModelNotFound]
+Description = "The Metric Model Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError]
+Description = "Internal Error"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.GetDataViewQueryFiltersFailed]
+Description = "Get Data View Filters Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.GetMetricModelByIdFailed]
+Description = "Get Metric Model by Id Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.GetMetricModelIdByNameFailed]
+Description = "Get Metric Model Id by Name Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.GetVegaViewFieldsByIDFailed]
+Description = "Get Vega Logic View's Fields By ID Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.ExecPromQLFailed]
+Description = "PromQL Execution Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.FetchDatasFromVegaFailed]
+Description = "Fetch Datas From Vega Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.GetFieldsFailed]
+Description = "Get Fields Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.GetFieldValuesFailed]
+Description = "Get Field Values Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.GetLabelsFailed]
+Description = "Get Labels Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.ParseResultFailed]
+Description = "Parse Result to UniFormat Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.UnSupportPromQLResult]
+Description = "Unsupported Promql Result Type"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.ParseUpdateTimeFailed]
+Description = "Parse Metric Model UpdateTime Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.MarshalFailed]
+Description = "Marshal Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InternalError.UnmarshalFailed]
+Description = "Unmarshal Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.MetricModel.InvaliEnvironmentVariable.Timezone]
+Description = "Invali Environment Variable Timezone"
+Solution = "Please check whether the environment variable is correct."
+ErrorLink = "None"

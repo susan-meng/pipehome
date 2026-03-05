@@ -1,0 +1,66 @@
+
+# errorcode: TraceModel
+[Uniquery.TraceModel.InvalidParameter.ModelID]
+Description = "Invalid Trace Model ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.TraceModelNotFound]
+Description = "The Trace Model does not exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.TraceNotFound]
+Description = "The Trace does not exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.SpanNotFound]
+Description = "The Span does not exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.InternalError.GetTraceModelByIDFailed]
+Description = "An internal server error occurred while getting the Trace Model object by its ID"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.InternalError.SimulateCreateTraceModelFailed]
+Description = "An internal server error occurred while simulating the creation of Trace Model object"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.InternalError.SimulateUpdateTraceModelFailed]
+Description = "An internal server error occurred while simulating the update of Trace Model object"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.InternalError.SplitSpanIDFailed]
+Description = "An internal server error occurred while splitting Span ID"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.InternalError.GetUnderlyingDataSouceTypeFailed]
+Description = "An internal server error occurred while getting the underlying Data Souce Type"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.InternalError.GetDataConnectionByIDFailed]
+Description = "An internal server error occurred while getting the Data Connection object by its ID"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.InternalError.ProcessDataConnectionFailed]
+Description = "An internal server error occurred while processing the Data Connection object"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.InternalError.GetTingYunTraceListFailed]
+Description = "An internal server error occurred while getting the list of TINGYUN Trace"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.TraceModel.InternalError.GetTingYunTraceDetailFailed]
+Description = "An internal server error occurred while getting the details of TINGYUN Trace."
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"

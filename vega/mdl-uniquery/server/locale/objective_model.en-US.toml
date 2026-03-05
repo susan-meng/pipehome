@@ -1,0 +1,185 @@
+# errorcode: ObjectiveModel
+[Uniquery.ObjectiveModel.InvalidParameter]
+Description = "Invalid Request"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InvalidParameter.IgnoringMemoryCache]
+Description = "Invalid Ignoring Memory Cache"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InvalidParameter.IgnoringStoreCache]
+Description = "Invalid Ignoring Store Cache"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InvalidParameter.IncludeModel]
+Description = "Invalid Include Model"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.UnsupportObjectiveType]
+Description = "Unsupport Objective Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.ObjectiveType]
+Description = "Objective Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.ObjectiveConfig]
+Description = "Objective Config Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.Objective]
+Description = "Objective Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InvalidParameter.Objective]
+Description = "Objective Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.Period]
+Description = "Period Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.GoodMetricModel]
+Description = "Good Metric Model Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.GoodMetricModelID]
+Description = "Good Metric Model ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.TotalMetricModel]
+Description = "Total Metric Model Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.TotalMetricModelID]
+Description = "Total Metric Model ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.ObjectiveUnit]
+Description = "Objective Unit Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.ComprehensiveMetricModels]
+Description = "Comprehensive Metric Models Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.ComprehensiveMetricModelID]
+Description = "Comprehensive Metric Model ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.ComprehensiveWeight]
+Description = "Comprehensive Weight Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InvalidParameter.ComprehensiveWeight]
+Description = "Comprehensive Weight Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.NullParameter.AdditionalMetricModelID]
+Description = "Additional Metric Model ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InvalidParameter.ObjectiveConfig]
+Description = "Invalid Objective Config"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InvalidParameter.MetricModelID]
+Description = "Invalid Metric Model ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InvalidParameter.StatusRanges]
+Description = "Invalid Status Ranges"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InvalidParameter.ObjectiveUnit]
+Description = "Invalid Objective Unit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.UnsupportQuery]
+Description = "Unsupported Query"
+Solution = "Please check whether the parameter is supported."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.CountExceeded.ComprehensiveMetricModelsTotal]
+Description = "Number of Comprehensive Metric Models Exceeds 10"
+Solution = "Please check whether the number of comprehensive metric models is within the allowed limit."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.CountExceeded.AdditionalMetricModelsTotal]
+Description = "Number of Additional Metric Models Exceeds 5"
+Solution = "Please check whether the number of additional metric models is within the allowed limit."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.CountExceeded.StatusTotal]
+Description = "Number of Status Ranges Exceeds 10"
+Solution = "Please check whether the number of status ranges is within the allowed limit."
+ErrorLink = "None" 
+
+[Uniquery.ObjectiveModel.AssociateMetricModelsUnit.Different]
+Description = "Objective Model Unit Is Different"
+Solution = "Please check whether the objective model unit is the same as the good metric model unit."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.ObjectiveModelNotFound]
+Description = "Objective Model Not Found"
+Solution = "Please check whether the objective model exists."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.MetricModelNotFound]
+Description = "Metric Model Not Found"
+Solution = "Please check whether the metric model exists."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InternalError]
+Description = "Internal Error"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InternalError.SubmitGetMetricDataTaskFailed]
+Description = "Failed to Submit Get Metric Data Task"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InternalError.MetricTimePointsNotEqual]
+Description = "Metric Time Points Are Not Equal"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.InternalError.AssertFloat64Failed]
+Description = "Failed to Assert Metric Value To Float64"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InternalError.GetMetricModelsFailed]
+Description = "Failed to Get Metric Models"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.ObjectiveModel.InternalError.GetObjectiveModelByIdFailed]
+Description = "Failed to Get Objective Model by ID"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"

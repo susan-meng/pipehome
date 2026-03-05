@@ -1,0 +1,158 @@
+# errorcode: Common
+[vega-gateway-pro.NullParameter.OverrideMethod]
+Description = "HTTP Header 'X-HTTP-Method-Override' Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.OverrideMethod]
+Description = "Invalid HTTP Header 'X-HTTP-Method-Override'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.RequestBody]
+Description = "Invalid Request Body"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.Start]
+Description = "Invalid Start Time"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.End]
+Description = "Invalid End Time"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.Offset]
+Description = "Invalid Offset"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.Limit]
+Description = "Invalid Pagination Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.Sort]
+Description = "Invalid Sort Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.Direction]
+Description = "Invalid Sort Direction"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.OffestAndLimitSum]
+Description = "Invalid Sum of Offset and Pagination Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.Filter]
+Description = "Invalid Filter"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.NullParameter.FieldName]
+Description = "Field Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.NullParameter.FilterName]
+Description = "Filter Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.NullParameter.FilterOperation]
+Description = "Filter Operation Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.NullParameter.FilterValue]
+Description = "Filter Value Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.FilterName]
+Description = "Invalid Filter Name"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.FilterValue]
+Description = "Invalid Filter Value"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.UnsupportFilterOperation]
+Description = "Unsupported Filter Operation"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidRequestHeader.Authorization]
+Description = "Authorization Failed"
+Solution = "Please check the Http Header."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidRequestHeader.ContentType]
+Description = "Invalid ContentType"
+Solution = "Please check the Http Header."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter.ValueFrom]
+Description = "Invalid Filter Value From"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.Forbidden.FilterField]
+Description = "The filter field is not allowed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[vega-gateway-pro.InternalError]
+Description = "Internal Error"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[vega-gateway-pro.InternalError.CheckPermissionFailed]
+Description = "An internal server error occurred while check permission"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[vega-gateway-pro.InternalError.FilterResourcesFailed]
+Description = "An internal server error occurred while filter resources"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[vega-gateway-pro.InternalError.GetResourcesOperationsFailed]
+Description = "An internal server error occurred while get resources operations"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[vega-gateway-pro.InternalError.SearchSubmitFailed]
+Description = "Search Submit Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[vega-gateway-pro.InternalError.ScrollFailed]
+Description = "Scroll Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[vega-gateway-pro.InternalError.CountFailed]
+Description = "Count Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[vega-gateway-pro.InvalidParameter]
+Description = "Invalid Request"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+
+
+
+
+
+
+

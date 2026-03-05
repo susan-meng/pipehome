@@ -1,0 +1,50 @@
+# 错误码: Trace
+[UniQuery.Trace.InvalidParameter.StartTime]
+Description = "指定的开始时间无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.Trace.InvalidParameter.EndTime]
+Description = "指定的结束时间无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.Trace.InvalidParameter.SpanStatuses]
+Description = "指定的跨度状态无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.Trace.InvalidParameter.TraceDataViewID]
+Description = "指定的链路日志分组ID无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.Trace.InvalidParameter.LogDataViewID]
+Description = "指定的关联日志的日志分组ID无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.Trace.MissingParameter.TraceDataViewID]
+Description = "指定的链路日志分组ID未传入"
+Solution = "请检查参数是否传入。"
+ErrorLink = "暂无"
+
+[UniQuery.Trace.MissingParameter.LogDataViewID]
+Description = "指定的关联日志的日志分组ID未传入"
+Solution = "请检查参数是否传入。"
+ErrorLink = "暂无"
+
+[UniQuery.Trace.TraceDataViewNotFound]
+Description = "指定的链路日志分组不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.Trace.LogDataViewNotFound]
+Description = "指定的关联日志的日志分组不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[UniQuery.Trace.TraceNotFound]
+Description = "指定的链路不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"

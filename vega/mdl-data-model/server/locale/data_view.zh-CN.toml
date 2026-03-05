@@ -1,0 +1,498 @@
+# 逻辑视图
+[DataModel.DataView.InvalidParameter.FieldFeatureName]
+Description = "逻辑视图字段特征名称无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.FieldName]
+Description = "逻辑视图字段名称无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Duplicated.ViewIDInFile]
+Description = "文件内存在重复的逻辑视图ID：'{{.ViewID}}'"
+Solution = "请检查导入的文件内的逻辑视图ID参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Duplicated.ViewNameInFile]
+Description = "文件内存在分组'{{.GroupName}}'内重复的逻辑视图名称：'{{.ViewName}}'"
+Solution = "请检查导入的文件内的逻辑视图名称参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Duplicated.ViewTechnicalNameInFile]
+Description = "文件内存在分组'{{.GroupName}}'内重复的逻辑视图技术名称：'{{.TechnicalName}}'"
+Solution = "请检查导入的文件内的逻辑视图技术名称参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Duplicated.ViewID]
+Description = "数据库内存在相同的逻辑视图ID"
+Solution = "请检查逻辑视图ID参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.NullParameter.AttributeFields]
+Description = "视图属性字段为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.NullParameter.ViewName]
+Description = "逻辑视图名称为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.LengthExceeded.ViewName]
+Description = "逻辑视图名称长度超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.LengthExceeded.ViewGroupName]
+Description = "逻辑视图分组名称长度超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.NullParameter.IndexBaseType]
+Description = "索引库类型为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.NullParameter.Fields]
+Description = "逻辑视图字段为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.LengthExceeded.Comment]
+Description = "逻辑视图备注超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.LengthExceeded.FieldComment]
+Description = "逻辑视图字段备注超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.LengthExceeded.FieldFeatureComment]
+Description = "逻辑视图字段特征备注超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.LengthExceeded.FieldFeatureName]
+Description = "逻辑视图字段特征名称超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.LengthExceeded.FieldName]
+Description = "逻辑视图字段名称超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.LengthExceeded.FieldDisplayName]
+Description = "逻辑视图字段显示名超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.AttributeFields]
+Description = "视图属性字段无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.Builtin]
+Description = "逻辑视图参数 'builtin' 无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.ViewID]
+Description = "逻辑视图ID无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.DataScope]
+Description = "数据范围无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.DataSource]
+Description = "数据源无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.FieldScope]
+Description = "字段范围无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.ImportMode]
+Description = "导入模式参数无效"
+Solution = "请检查导入模式参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.LogGroupFilters]
+Description = "包含分组条件的逻辑视图不支持实时订阅"
+Solution = "请检查分组条件参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.OpenStreaming]
+Description = "参数'是否开启实时订阅'无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.TechnicalName]
+Description = "参数'技术名称'无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.UnsupportDataSourceType]
+Description = "不支持的数据源类型"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Duplicated.ViewName]
+Description = "逻辑视图名称'{{.ViewName}}'在分组'{{.GroupName}}'内重复"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Existed.ViewID]
+Description = "逻辑视图ID已存在"
+Solution = "请检查视图ID参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Existed.ViewName]
+Description = "逻辑视图名称'{{.ViewName}}'在分组'{{.GroupName}}'内已存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Existed.TechnicalName]
+Description = "逻辑视图技术名称'{{.TechnicalName}}'在分组'{{.GroupName}}'内已存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.FilterFieldTypeMisMatchOperation]
+Description = "过滤条件字段'{{.FieldName}}'的类型'{{.FieldType}}'和操作符'{{.Operation}}'不匹配"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidFieldPermission.Filters]
+Description = "过滤条件字段'{{.FieldName}}'不在视图字段列表里"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.MissingRequiredField]
+Description = "缺少必要字段"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.FieldTypeConflict]
+Description = "存在字段类型冲突"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.IndexbaseNotFound]
+Description = "索引库不存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.CountExceeded.Filters]
+Description = "过滤条件个数超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Duplicated.FieldDisplayName]
+Description = "字段 '{{.FieldName}}' 的显示名 {{.DisplayName}} 已经存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Duplicated.FieldFeatureName]
+Description = "字段特征名称 '{{.FieldFeatureName}}' 已经存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Duplicated.FieldName]
+Description = "字段 '{{.FieldName}}' 已经存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidParameter.IncludeBuiltin]
+Description = "参数'是否包含内置视图'无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InvalidBuiltinGroupMatch]
+Description = "内置视图使用内置分组，非内置视图使用非内置分组"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.FilterBinaryFieldsForbidden]
+Description = "Binary 类型的字段不支持过滤"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.RealTimeStreamingForbidden]
+Description = "视图实时订阅功能不可用"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.DataViewNotFound]
+Description = "逻辑视图不存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.Unsupport.ContextType]
+Description = "上下文类型不支持"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.GetDataViewsFailed]
+Description = "通过ID获取视图详情失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.CheckViewIfExistFailed]
+Description = "校验名称是否存在失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.GetIndexBaseByTypeFailed]
+Description = "获取索引库详情失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.DeleteDataViewsFailed]
+Description = "删除逻辑视图失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.InvalidReferenceView]
+Description = "引用的原子视图不可用"
+Solution = "请检查引用的原子视图是否有效"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.ListDataViewsFailed]
+Description = "获取逻辑视图列表失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.GetDataViewsTotalFailed]
+Description = "获取视图总数失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.CreateDataViewsFailed]
+Description = "创建逻辑视图失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.UpdateDataViewFailed]
+Description = "更新逻辑视图失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.MarshalViewAttrFailed]
+Description = "序列化视图属性失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.UnMarshalViewAttrFailed]
+Description = "反序列化视图属性失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.ConvertBaseFieldsToViewFieldsFailed]
+Description = "转换索引库字段为视图字段失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.GetDataViewIDsByNamesFailed]
+Description = "批量根据视图名称获取视图 ID 失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.GetDataViewsByGroupIDFailed]
+Description = "通过分组ID获取视图列表失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.GetSimpleDataViewMapByNamesFailed]
+Description = "获取逻辑视图名称与简单对象的映射关系时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.GetDetailedDataViewMapByIDsFailed]
+Description = "获取逻辑视图 ID 与详细视图对象的映射关系时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.GetSimpleDataViewMapByIDsFailed]
+Description = "获取逻辑视图ID与简单对象的映射关系时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.UpdateDataViewRealTimeStreamingFailed]
+Description = "开启或关闭视图实时订阅失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.UpdateDataViewsGroupFailed]
+Description = "更新逻辑视图分组失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.GetJobsByDataViewIDsFailed]
+Description = "通过视图ID获取实时订阅任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.BeginDbTransactionFailed]
+Description = "开启数据库事务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.CreateDataModelJobFailed]
+Description = "创建视图实时订阅任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.DeleteDataModelJobFailed]
+Description = "删除视图实时订阅任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataView.InternalError.CheckJobConfigChanged]
+Description = "对比实时订阅任务配置失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+
+# 逻辑视图分组
+[DataModel.DataViewGroup.Existed.GroupName]
+Description = "逻辑视图分组名称已存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InvalidParameter.Builtin]
+Description = "逻辑视图分组查询参数 'builtin' 无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InvalidParameter.DeleteViews]
+Description = "删除视图参数无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InvalidParameter.GroupName]
+Description = "分组名称包含非法字符"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InvalidParameter.RequestBody]
+Description = "请求体参数无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.LengthExceeded.GroupName]
+Description = "分组名称长度超出限制"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.NullParameter.GroupID]
+Description = "分组ID为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.NullParameter.GroupName]
+Description = "分组名称为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.ForbiddenBuiltinGroupID]
+Description = "内置分组禁止更新或删除"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.ForbiddenBuiltinGroupName]
+Description = "不能使用内置分组"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.GroupNotEmpty]
+Description = "分组不为空"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.GroupNotFound]
+Description = "分组不存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InternalError.BeginDBTransactionFailed]
+Description = "开启数据库事务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InternalError.CheckGroupExistByNameFailed]
+Description = "校验分组名称是否存在失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InternalError.CreateGroupFailed]
+Description = "创建分组失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InternalError.DeleteDataViewsInGroupFailed]
+Description = "删除分组内视图失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InternalError.DeleteGroupFailed]
+Description = "删除分组失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InternalError.GetGroupByIDFailed]
+Description = "通过ID获取分组详情失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InternalError.GetGroupsTotalFailed]
+Description = "获取视图分组总数失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InternalError.GetViewsByGroupIDFailed]
+Description = "通过分组ID获取视图列表失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InternalError.ListGroupsFailed]
+Description = "获取分组列表失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewGroup.InternalError.UpdateGroupFailed]
+Description = "更新分组失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+# 行列规则
+[DataModel.DataViewRowColumnRule.ExistByName]
+Description = "视图行列规则名称已存在"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewRowColumnRule.LengthExceeded.RuleName]
+Description = "逻辑视图行列规则名称长度超出限制"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewRowColumnRule.NullParameter.RuleID]
+Description = "逻辑视图行列规则ID为空"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewRowColumnRule.NullParameter.RuleName]
+Description = "逻辑视图行列规则名称为空"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.DataViewRowColumnRule.NullParameter.ViewID]
+Description = "行列规则所属的逻辑视图ID为空"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"

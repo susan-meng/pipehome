@@ -1,0 +1,189 @@
+[DataModel.DataDict.InvalidParameter]
+Description = "Invalid Request Parameter"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.DictNameExisted]
+Description = "Dict Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.NullParameter.DictName]
+Description = "The Dict Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.NullParameter.DictDimension]
+Description = "The Dict Dimension Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.NullParameter.DictItemKey]
+Description = "The Dict Item Key Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.NullParameter.DictItemValue]
+Description = "The Dict Item Value Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.Dict]
+Description = "Invalid Parameter Dict"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.DictItems]
+Description = "Invalid Parameter Dict Items"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.DictID]
+Description = "Invalid Parameter Dict ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.DictIDs]
+Description = "Invalid Parameter Dict IDs"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.DictDimension]
+Description = "Invalid Parameter Dict Dimension"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.DictItemsFile]
+Description = "Invalid Parameter Dict Items File"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.FileExt]
+Description = "Unsupported File Extension"
+Solution = "Please check if the import file of data dictionary is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.Format]
+Description = "Invalid File Export Format"
+Solution = "Please check the export file format parameters."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.ImportMode]
+Description = "Invalid Parameter ImportMode"
+Solution = "Please check the import_mode query parameters."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.ItemID]
+Description = "Invalid Parameter Dict Item ID"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.InvalidParameter.ItemIDs]
+Description = "Invalid Parameter Dict Item IDs"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.Duplicated.DictName]
+Description = "Same Dict Name Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.Duplicated.DictDimension]
+Description = "Same Dict Dimension Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.Duplicated.DictItemKey]
+Description = "Same Dict Item Key Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.Duplicated.DictItemKeyInFile]
+Description = "Same Dict Item Key Exists In The File: '{{.ItemKey}}'"
+Solution = "Please check whether the dict items in the imported file are correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.LengthExceeded.DictName]
+Description = "The Length Of Dict Name Exceeds The Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.LengthExceeded.DictComment]
+Description = "The Length Of Dict Comment Exceeds The Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.LengthExceeded.DictDimensionName]
+Description = "The Length Of Dict Dimension Name Exceeds The Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.LengthExceeded.DictItemKey]
+Description = "The Length Of Dict Item Key Exceeds The Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.LengthExceeded.DictItemValue]
+Description = "The Length Of Dict Item Value Exceeds The Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.LengthExceeded.DictItemComment]
+Description = "The Length Of Dict Item Comment Exceeds The Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.BadRequest.ParseCSVFileFailed]
+Description = "Failed to Parse CSV File"
+Solution = "Please check whether the csv file format is correct. "
+ErrorLink = "None"
+
+[DataModel.DataDict.BadRequest.ParseXlsxFileFailed]
+Description = "Failed to Parse XlSX File"
+Solution = "Please check whether the xlsx file format is correct. "
+ErrorLink = "None"
+
+[DataModel.DataDict.BadRequest.ItemsAreEmpty]
+Description = "None"
+Solution = "Please check whether the import file format is correct. "
+ErrorLink = "None"
+
+[DataModel.DataDict.DictNotFound]
+Description = "The Dict Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.DictItemNotFound]
+Description = "The Dict Item Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.DataDict.InternalError]
+Description = "An Internal Server Error Occurred"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataDict.InternalError.BeginTransactionFailed]
+Description = "An Internal Server Error Occurred While Begin Transaction"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataDict.InternalError.CommitTransactionFailed]
+Description = "An Internal Server Error Occurred While Commit Transaction"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataDict.InternalError.ExportCSVFileFailed]
+Description = "Failed to Export CSV File"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataDict.InternalError.ExportXlsxFileFailed]
+Description = "Failed to Export XlSX File"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[DataModel.DataDict.InternalError.RollbackTransactionFailed]
+Description = "An Internal Server Error Occurred While Rollback Transaction"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"

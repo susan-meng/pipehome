@@ -1,0 +1,360 @@
+# 错误码: 指标模型
+[Uniquery.MetricModel.AggregationNotExisted]
+Description = "聚合字段在Vega逻辑视图中不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.AnalysisDimensionNotExisted]
+Description = "分析维度在Vega逻辑视图中不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.DateFieldNotExisted]
+Description = "时间字段在Vega逻辑视图中不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.GroupByFieldNotExisted]
+Description = "分组字段在Vega逻辑视图中不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter]
+Description = "请求参数不合法"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.DataSourceType]
+Description = "数据来源类型不合法"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.DerivedCondition]
+Description = "衍生指标的过滤条件无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.MetricType]
+Description = "指标类型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.HavingConditionName]
+Description = "Having过滤字段名配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.HavingConditionOperation]
+Description = "Having过滤操作符为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.OrderByDirection]
+Description = "排序方向为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.OrderByName]
+Description = "排序字段名称为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.DateField]
+Description = "时间字段为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.DataSource]
+Description = "数据来源为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.DataSourceID]
+Description = "数据来源ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.DependMetricModel]
+Description = "依赖的指标模型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.DerivedCondition]
+Description = "衍生指标的过滤条件为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.QueryType]
+Description = "查询语言为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.RequestMetricsType]
+Description = "同环比计算的指标类型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.SamePeriodCfg]
+Description = "同环比计算的配置为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.SamePeriodMethod]
+Description = "同环比计算函数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.SQLAggrExpression]
+Description = "聚合表达式（SQL）为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.Formula]
+Description = "计算公式为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.FormulaConfig]
+Description = "计算公式配置为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.Step]
+Description = "步长为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.NullParameter.MeasureField]
+Description = "度量字段参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.Step]
+Description = "指定的步长无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.ModelID]
+Description = "指标模型 ID 无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.Time]
+Description = "瞬时查询计算时间参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.LookBackDelta]
+Description = "瞬时查询的回退时间参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.FieldName]
+Description = "字段名参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.FillNull]
+Description = "补空参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.Formula]
+Description = "计算公式无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.FormulaConfig]
+Description = "计算配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.MeasureField]
+Description = "度量字段无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.IgnoringHCTS]
+Description = "是否忽略高基序列的查询参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.IgnoringStoreCache]
+Description = "是否忽略持久化缓存下来的数据无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.IgnoringMemoryCache]
+Description = "是否忽略内存缓存无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.IncludeModel]
+Description = "是否包含模型信息无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.Offset]
+Description = "开始响应的序列的偏移量无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.OrderByDirection]
+Description = "排序方向无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.RequestMetricsType]
+Description = "同环比计算的指标类型无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.SamePeriodMethod]
+Description = "同环比计算的函数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.SamePeriodOffset]
+Description = "同环比计算的偏移量无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.SamePeriodTimeGranularity]
+Description = "同环比计算的时间粒度无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.SQLAggrExpression]
+Description = "度量聚合计算无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.SQLCondition]
+Description = "数据过滤（SQL）配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.SqlConfig]
+Description = "计算公式（SQL）配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvalidParameter.Limit]
+Description = "每页最多可返回的序列数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.UnsupportDataSourceType]
+Description = "不支持的数据来源类型"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.UnsupportMetricType]
+Description = "不支持的指标类型"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.UnsupportQueryType]
+Description = "不支持的查询语言"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.UnsupportQuery]
+Description = "不支持的查询"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.UnsupportHavingConditionOperation]
+Description = "不支持的值过滤操作符"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.DataViewNotFound]
+Description = "数据视图不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.MetricModelNotFound]
+Description = "指标模型不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError]
+Description = "服务器内部错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.GetDataViewQueryFiltersFailed]
+Description = "获取数据视图信息失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.GetMetricModelByIdFailed]
+Description = "按ID获取指标模型失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.GetMetricModelIdByNameFailed]
+Description = "按名称获取指标模型ID失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.GetVegaViewFieldsByIDFailed]
+Description = "按ID获取Vega逻辑视图的字段列表时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.ExecPromQLFailed]
+Description = "执行 PromQL 语句失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.FetchDatasFromVegaFailed]
+Description = "从 Vega 获取数据失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.GetFieldsFailed]
+Description = "获取指标原始字段失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.GetFieldValuesFailed]
+Description = "获取指标原始字段值失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.GetLabelsFailed]
+Description = "获取指标维度失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.ParseResultFailed]
+Description = "查询结果转成统一格式失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.UnSupportPromQLResult]
+Description = "不支持的 PromQL 查询结果"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.ParseUpdateTimeFailed]
+Description = "解析指标模型的更新时间失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.MarshalFailed]
+Description = "序列化失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InternalError.UnmarshalFailed]
+Description = "反序列化失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[Uniquery.MetricModel.InvaliEnvironmentVariable.Timezone]
+Description = "不支持的环境变量timezone"
+Solution = "请检查环境变量是否正确。"
+ErrorLink = "暂无"

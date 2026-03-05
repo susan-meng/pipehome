@@ -1,0 +1,25 @@
+# errorcode: EventModel
+[Uniquery.EventModel.InvalidParameter]
+Description = "The Event Model Query Parameter is invalid"
+Solution = "Please check the parameter."
+ErrorLink = "None"
+ 
+[Uniquery.EventModel.EventModelNotFound]
+Description = "The Event Model Does Not Exist"
+Solution = "Please check the parameter."
+ErrorLink = "None"
+
+[Uniquery.EventModel.EventNotFound]
+Description = "The Event  Does Not Exist"
+Solution = "Please check the parameter."
+ErrorLink = "None"
+
+[Uniquery.EventModel.InternalError]
+Description = "EventModel InternalError"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.EventModel.InternalError.GetEventModelByIdFailed]
+Description = "Get Event Model By Id Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"

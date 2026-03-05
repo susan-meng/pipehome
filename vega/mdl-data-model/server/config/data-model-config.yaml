@@ -1,0 +1,82 @@
+server:
+  runMode: release
+  httpPort: 13020
+  language: zh-CN
+  readTimeOut: 120
+  writeTimeOut: 120
+  persistSteps: [5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 6h, 12h, 1d]
+  watchMetadataInterval: 60 # 单位为秒
+  watchMetadataEnabled: true
+log:
+  logLevel: debug
+  developMode: false
+  maxAge: 100
+  maxBackups: 20
+  maxSize: 100
+thirdParty:
+  tingYunTokenActiveTime: 120 # 单位为分钟
+dataModelJob:
+  serviceDeploymentEnabled: true
+observability:
+  logEnabled: false
+  traceEnabled: false
+  metricEnabled: false
+  logExporter: console
+  traceProvider: http
+  metricProvider: http
+  logLoadInternal: 1
+  logLoadMaxLog: 10
+  traceMaxQueueSize: 50000
+  metricIntervalSecond: 60
+  httpLogFeedIngesterUrl: http://feed-ingester-service:13031/api/feed_ingester/v1/jobs/dip-o11y-log/events
+  httpTraceFeedIngesterUrl: http://feed-ingester-service:13031/api/feed_ingester/v1/jobs/dip-o11y-trace/events
+  httpMetricFeedIngesterUrl: http://feed-ingester-service:13031/api/feed_ingester/v1/jobs/dip-o11y-metric/events
+  grpcTraceFeedIngesterUrl: feed-ingester-service:30013
+  grpcTraceJobId: dip-o11y-trace-grpc
+depServices:
+  class-443:
+    ingressClass: class-443
+  rds:
+    host: localhost
+    port: 30006
+    user: test
+    password: testpwd
+    type: MariaDB
+  mq:
+    auth:
+      mechanism: PLAIN
+      username: test
+      password: testpwd
+    mqHost: kafka-headless.resource.svc.cluster.local.
+    mqPort: 9097
+    mqType: kafka
+    protocol: sasl_plaintext
+    tenant: default
+  authorization-private:
+    host: localhost
+    port: 30920
+    protocol: http
+  hydra-admin:
+    host: localhost
+    port: 4445
+    protocol: http
+  data-model-job:
+    host: localhost
+    port: 13025
+    protocol: http
+  index-base:
+    host: localhost
+    port: 13013
+    protocol: http
+  data-connection:
+    host: localhost
+    port: 8098
+    protocol: http
+  vega-gateway:
+    host: localhost
+    port: 8099
+    protocol: http
+  uniquery:
+    host: localhost
+    port: 13011
+    protocol: http

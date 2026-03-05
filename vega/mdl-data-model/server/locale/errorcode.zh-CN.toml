@@ -1,0 +1,342 @@
+# 公共错误码
+[DataModel.InvalidParameter.OverrideMethod]
+Description = "重载方法无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.RequestBody]
+Description = "请求体无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.ConflictParameter.NameAndNamePatternCoexist]
+Description = "同时传入名称的精确值和模糊值"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.Offset]
+Description = "指定的偏移量无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.Limit]
+Description = "指定的每页数量限制无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.ModuleType]
+Description = "指定的模块名称应为数据视图"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.Direction]
+Description = "指定的排序方向无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.Sort]
+Description = "指定的排序类型无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.Tags]
+Description = "传入的标签数组无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.CountExceeded.Tags]
+Description = "标签个数超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.NullParameter.Tag]
+Description = "部分标签为空值"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.LengthExceeded.Tag]
+Description = "部分标签长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.Tag]
+Description = "部分标签无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.LengthExceeded.Comment]
+Description = "备注长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.Filters]
+Description = "过滤器参数结构不正确"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.Forbidden.FilterField]
+Description = "过滤条件字段不允许 __id 和 __routing"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.NullParameter.FilterName]
+Description = "过滤器字段名称参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.NullParameter.FilterOperation]
+Description = "过滤器操作符参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.NullParameter.FilterValue]
+Description = "过滤器值参数为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.FilterValue]
+Description = "过滤器值参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.UnsupportFilterOperation]
+Description = "不支持的过滤器操作符"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.ID]
+Description = "对象ID参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.ValueFrom]
+Description = "过滤条件的字段值来源无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidRequestHeader.ContentType]
+Description = "无效的ContentType"
+Solution = "请检查Http请求头"
+ErrorLink = "暂无"
+
+[DataModel.InternalError]
+Description = "服务器内部错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.BeginTransactionFailed]
+Description = "开启事务时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.CommitTransactionFailed]
+Description = "提交事务时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.DataBaseError]
+Description = "数据库操作时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.MarshalDataFailed]
+Description = "序列化数据时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.UnmarshalDataFailed]
+Description = "反序列化数据时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.CheckPermissionFailed]
+Description = "校验权限时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.CreateResourcesFailed]
+Description = "创建资源策略时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.DeleteResourcesFailed]
+Description = "删除资源策略时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.FilterResourcesFailed]
+Description = "过滤资源策略时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.UpdateResourceFailed]
+Description = "更新资源名称时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.MQPublishMsgFailed]
+Description = "mq发送消息时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.StartJobFailed]
+Description = "启动视图实时订阅任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.StopJobFailed]
+Description = "停止视图实时订阅任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.UpdateJobFailed]
+Description = "更新视图实时订阅任务失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+# 数据标签
+[DataModel.InvalidParameter.DataTagName]
+Description = "指定的数据标签名称无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter.SimpleInfo]
+Description = "指定的是否查询简单信息参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.DataTagNotFound]
+Description = "指定的数据标签不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.InternalError.FailedToGetAllDataTagUserInfo]
+Description = "获取所有数据标签使用者信息失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.InvalidParameter]
+Description = "请求参数不合法"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+# 错误码: #事件模型管理
+[EventModel.InvalidParameter]
+Description = "请求参数不合法"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.NullParameter.Schedule]
+Description = "持久化任务执行频率为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.NullParameter.ScheduleType]
+Description = "持久化任务执行频率类型为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.InvalidParameter.ScheduleType]
+Description = "持久化任务执行频率类型无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.NullParameter.ScheduleExpression]
+Description = "持久化任务执行频率表达式为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.InvalidParameter.ScheduleExpression]
+Description = "持久化任务执行频率表达式无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.NullParameter.IndexBase]
+Description = "索引库为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.NullParameter.DataViewID]
+Description = "数据视图ID为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.InvalidParameter.BlockStrategy]
+Description = "阻塞策略无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.InvalidParameter.RouteStrategy]
+Description = "路由策略无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.InvalidParameter.TimeOut]
+Description = "超时时间无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.InvalidParameter.FailRetryCount]
+Description = "失败重试次数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[EventModel.DataSourceIllegal]
+Description = "数据源不存在"
+Solution = "请检查数据源是否存在。"
+ErrorLink = "暂无"
+
+[EventModel.DependentModelIllegal]
+Description = "依赖事件模型非法"
+Solution = "请更换依赖事件模型"
+ErrorLink = "暂无"
+
+[EventModel.RunModeIllegal]
+Description = "事件模型运行模式非法"
+Solution = "请检查事件模型的运行状态属性"
+ErrorLink = "暂无"
+
+[EventModel.TaskSyncCreateFailed]
+Description = "事件模型定时任务创建失败"
+Solution = "请检查事件模型的运行配置"
+ErrorLink = "暂无"
+
+[EventModel.ModelNameExisted]
+Description = "事件模型名称已经存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[EventModel.RefByOther]
+Description = "事件模型被引用"
+Solution = "请检查事件模型的依赖情况后再重试"
+ErrorLink = "暂无"
+
+[EventModel.EventModelNotFound]
+Description = "事件模型未找到"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[EventModel.InternalError]
+Description = "系统内部错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[EventModel.InternalError.GenerateIDFailed]
+Description = "生成分布式 id 失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[EventModel.InternalError.GetModelByIDFailed]
+Description = "按 id 获取事件模型失败"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.InternalError.BeginTransactionFailed]
+Description = "开启事务异常"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.EventModel.InternalError.TaskBeingModified]
+Description = "任务正在修改中"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"

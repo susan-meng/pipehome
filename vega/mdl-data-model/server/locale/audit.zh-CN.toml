@@ -1,0 +1,59 @@
+# 审计日志-loglevel
+ID_AUDIT_LEVEL_INFO = "信息"
+
+ID_AUDIT_LEVEL_WARNING = "警告"
+
+# 审计日志-logtype
+ID_AUDIT_ACCESS_LOG = "访问日志"
+
+ID_AUDIT_MANAGEMENT_LOG = "管理日志"
+
+ID_AUDIT_ACTION_LOG = "操作日志"
+
+# 审计日志-action
+ID_AUDIT_ACTION_CREATE = "新建"
+
+ID_AUDIT_ACTION_DELETE = "删除"
+
+ID_AUDIT_ACTION_UPDATE = "修改"
+
+ID_AUDIT_ACTION_EXECUTE = "立即执行"
+
+ID_AUDIT_ACTION_ALLOW = "允许"
+
+ID_AUDIT_ACTION_NOT_ALLOW = "不允许"
+
+# 审计日志-结果
+ID_AUDIT_SUCCESS = "成功"
+
+ID_AUDIT_FAILED = "失败"
+
+# 审计日志-对象类型
+ID_AUDIT_ARCHITECTURE_MODEL = "结构模型"
+
+ID_AUDIT_DATA_DICT = "数据字典"
+
+ID_AUDIT_DATA_DICT_ITEM = "数据字典项"
+
+ID_AUDIT_DATA_VIEW = "数据视图"
+
+ID_AUDIT_DATA_VIEW_GROUP = "数据视图分组"
+
+ID_AUDIT_REAL_TIME_STREAMING = "实时订阅"
+
+ID_AUDIT_EVENT_MODEL = "事件模型"
+
+ID_AUDIT_METRIC_MODEL = "指标模型"
+
+ID_AUDIT_METRIC_MODEL_GROUP = "指标模型分组"
+
+ID_AUDIT_DATA_CONNECTION = "数据连接"
+
+ID_AUDIT_TRACE_MODEL = "链路模型"
+
+ID_AUDIT_OBJECTIVE_MODEL = "目标模型"
+
+# 审计日志-公共部分
+ID_AUDIT_UNKNOWN_USER = "未知用户"
+
+ID_AUDIT_UNKNOWN_IP = "未知IP"

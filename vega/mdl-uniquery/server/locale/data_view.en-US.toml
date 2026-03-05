@@ -1,0 +1,239 @@
+[Uniquery.DataView.CountExceeded.Filters]
+Description = "The Number Of Filters Exceeds The Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.FieldTypeConflict]
+Description = "Field Type Conflict"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidFieldPermission.Sort]
+Description = "The Sort Field Is not In The View Field List"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidFilterField.FieldNotInView]
+Description = "The Filter Field Is Not In The View Field List"
+Solution = "Please check whether the filter field is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.AllowNonExistField]
+Description = "Invalid Query Param allow_non_exist_field"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.DataScope]
+Description = "Invalid Data Scope"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.DataSource]
+Description = "Invalid Data Souce"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.Direction]
+Description = "Invalid Direction"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.FieldScope]
+Description = "Invalid Field Scope"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.Filters]
+Description = "Invalid Filters"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.Format]
+Description = "Invalid Format"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.IncludeView]
+Description = "Invalid Include View"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.Scroll]
+Description = "Invalid Scroll"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.PitKeepAlive]
+Description = "Invalid Point In Time keep_alive Parameter"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.QueryType]
+Description = "Invalid Query Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.Sort]
+Description = "The Sort Field And Direction Cannot Be Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.InvalidParameter.ViewIDs]
+Description = "Invalid ViewIDs"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.MissingRequiredField]
+Description = "Missing Required Field '{{.FieldName}}'"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.NullParameter.Fields]
+Description = "View Fields Are Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.NullParameter.IndexBaseNames]
+Description = "IndexBase Names Are Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.NullParameter.Scroll]
+Description = "Scroll is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.UnsupportDataSourceType]
+Description = "Unsupport Data Source Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.BinaryFieldSortNotSupported]
+Description = "Binary Fields Do Not Support Sorting"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.OffsetNotAllowedWithScroll]
+Description = "When You Have the 'scroll' Param, 'offset' Param Cannot Be Used"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[Uniquery.DataView.DataViewNotFound]
+Description = "Data View Does Not Exist"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.DataView.PointInTimeSearchContextNotFound]
+Description = "Point In Time Search Context Does Not Exist"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.ConvertSearchAfterToDSLFailed]
+Description = "Convert Search After Params To DSL Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.ConvertToDSLFailed]
+Description = "Convert To DSL Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.ConvertToViewUniResponseFailed]
+Description = "Convert To View UniResponse Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.CreatePointInTimeFailed]
+Description = "Create Point In Time Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.DeletePointInTimeFailed]
+Description = "Delete Point In Time Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.FetchDataFromVegaFailed]
+Description = "Fetch Data From Vega Gateway Pro Or Data Connection Service Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.GetDataViewByIDFailed]
+Description = "Get Data View By ID Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.GetDocumentsFailed]
+Description = "Get Documents Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.GetIndexBaseByTypeFailed]
+Description = "Get Index Base By Type Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.GetIndicesFailed]
+Description = "Get Indices Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.GetPitIdFailed]
+Description = "Get Pit Id Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.GetSearchAfterValueFailed]
+Description = "Get Search After Value Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.GetScrollIdFailed]
+Description = "Get Scroll Id Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.GetTotalFailed]
+Description = "Get Total Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.InvalidReferenceView]
+Description = "Invalid Reference Atomic View"
+Solution = "Please check whether the reference atomic view is valid."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.LoadIndexShardsFailed]
+Description = "Load Index Shards Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.MarshalFailed]
+Description = "Marshal Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.ProcessDocFailed]
+Description = "Process a Document Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.SetDocIdFailed]
+Description = "Set Document Id To View Data Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.SetDocIndexFailed]
+Description = "Set Document's Index Name To View Data Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.SubmitTaskFailed]
+Description = "Submit Task Of Concurrent Processing Documents Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[Uniquery.DataView.InternalError.UnmarshalFailed]
+Description = "Unmarshal Failed"
+Solution = "Please try this operation again, if the error occurs again, submit the work order or contact technical support engineers."
+ErrorLink = "None"

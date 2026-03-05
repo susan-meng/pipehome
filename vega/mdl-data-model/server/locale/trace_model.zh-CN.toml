@@ -1,0 +1,175 @@
+# 链路模型
+[DataModel.TraceModel.NullParameter.ModelName]
+Description = "链路模型名称为空"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.LengthExceeded.ModelName]
+Description = "链路模型名称长度超出限制"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidParameter.ModelIDs]
+Description = "链路模型ID无效"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.NotUniqueInBatch.ModelName]
+Description = "链路模型名称在同批次中不唯一"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.ModelNameExisted]
+Description = "链路模型名称已经存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig]
+Description = "基础属性配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.TraceID]
+Description = "基础属性中的Trace ID配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.SpanID]
+Description = "基础属性中的Span ID配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.ParentSpanID]
+Description = "基础属性中的父Span ID配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.Name]
+Description = "基础属性中的Span名称配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.StartTime]
+Description = "基础属性中的Span开始时间配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.EndTime]
+Description = "基础属性中的Span结束时间配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.Duration]
+Description = "基础属性中的Span耗时配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.Kind]
+Description = "基础属性中的Span类型配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.Status]
+Description = "基础属性中的Span状态配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidBasicAttributeConfig.ServiceName]
+Description = "基础属性中的Span所在服务名称配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidRelatedLogConfig.TraceID]
+Description = "关联日志中的Trace ID配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidRelatedLogConfig.SpanID]
+Description = "关联日志中的Span ID配置无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.DependentDataViewNotFound]
+Description = "依赖的数据视图不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.DependentDataConnectionNotFound]
+Description = "依赖的数据连接不存在"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidParameter.SpanSourceType]
+Description = "Span数据来源类型无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidParameter.RelatedLogSourceType]
+Description = "Span关联日志数据来源类型无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InvalidParameter.EnabledRelatedLog]
+Description = "Span关联日志开关参数无效"
+Solution = "请检查参数是否正确。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.TraceModelNotFound]
+Description = "链路模型不存在"
+Solution = "请检查参数是否正确"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.GetSimpleTraceModelMapByIDsFailed]
+Description = "获取链路模型ID与简单对象的映射关系时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.GetDetailedTraceModelMapByIDsFailed]
+Description = "获取链路模型ID与详细对象的映射关系时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.GetSimpleTraceModelMapByNamesFailed]
+Description = "获取链路模型名称与简单对象的映射关系时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.CreateTraceModelsFailed]
+Description = "创建链路模型时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.DeleteTraceModelsFailed]
+Description = "删除链路模型时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.UpdateTraceModelFailed]
+Description = "修改链路模型时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.GetTraceModelsFailed]
+Description = "获取链路模型时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.ListTraceModelsFailed]
+Description = "获取链路模型列表时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.GetTraceModelTotalFailed]
+Description = "获取链路模型总数时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.InitTraceModelProcessor]
+Description = "初始化链路模型处理器时，服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"
+
+[DataModel.TraceModel.InternalError.GetUnderlyingDataSourceTypeFailed]
+Description = "获取底层数据来源类型时, 服务器内部发生错误"
+Solution = "请重试该操作，若再次出现该错误请提交工单或联系技术支持工程师。"
+ErrorLink = "暂无"

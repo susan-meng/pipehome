@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eisoo.engine.metadata.mapper.TaskMapper">
+    <!-- 批量更新任务状态 -->
+    <update id="updateStateBatch">
+        UPDATE task_info
+        SET state = #{state}, update_time = #{updateTime}
+        WHERE task_id IN
+        <foreach item="taskId" index="index" collection="taskIds" open="(" separator="," close=")">
+            #{taskId}
+        </foreach>
+    </update>
+
+    <!-- 单个任务ID更新状态 -->
+    <update id="updateStateSingleWithTime">
+        UPDATE task_info
+        SET state = #{state}, update_time = #{updateTime}
+        WHERE task_id = #{taskId}
+    </update>
+
+    <select id="batchTaskIds" resultType="com.eisoo.engine.metadata.entity.TaskEntity">
+        SELECT task_id, sub_task_id, state, type, topic, create_time, update_time
+        FROM task_info
+        WHERE task_id IN
+        <foreach item="taskId" index="index" collection="taskIds" open="(" separator="," close=")">
+            #{taskId}
+        </foreach>
+    </select>
+
+    <update id="updateTaskStateBatch" parameterType="map">
+        UPDATE task_info
+        SET state = #{state}, update_time = #{updateTime}
+        WHERE task_id IN
+        <foreach item="taskId" index="index" collection="taskIds" open="(" separator="," close=")">
+            #{taskId}
+        </foreach>
+    </update>
+
+    <update id="updateQueryStateBatch" parameterType="map">
+        UPDATE query_info
+        SET state = #{state}, update_time = #{updateTime}
+        WHERE task_id IN
+        <foreach item="taskId" index="index" collection="taskIds" open="(" separator="," close=")">
+            #{taskId}
+        </foreach>
+    </update>
+</mapper>

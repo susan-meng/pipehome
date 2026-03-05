@@ -1,0 +1,255 @@
+# ObjectiveModel
+[DataModel.ObjectiveModel.InvalidParameter]
+Description = "Invalid Request Paramter"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+ 
+[DataModel.ObjectiveModel.NullParameter.ModelName]
+Description = "Objective Model Name Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.ObjectiveType]
+Description = "Objective Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.ObjectiveConfig]
+Description = "Objective Config Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.Task]
+Description = "Objective's Task Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.Schedule]
+Description = "Schedule Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.ScheduleExpression]
+Description = "Schedule Expression Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.ScheduleType]
+Description = "Schedule Type Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.Period]
+Description = "SLO Objective's Period Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.GoodMetricModel]
+Description = "SLO Objective's Good Metric Model Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.GoodMetricModelID]
+Description = "SLO Objective's Good Metric Model ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.TotalMetricModel]
+Description = "SLO Objective's Total Metric Model Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.TotalMetricModelID]
+Description = "SLO Objective's Total Metric Model ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.ObjectiveUnit]
+Description = "Objective Unit Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.ComprehensiveMetricModels]
+Description = "Comprehensive Metric Models Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.ComprehensiveMetricModelID]
+Description = "Comprehensive Metric Model ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.ComprehensiveWeight]
+Description = "Comprehensive Metric Weight Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.AdditionalMetricModelID]
+Description = "Additional Metric Model ID Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.Objective]
+Description = "Objective Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.IndexBase]
+Description = "Index Base Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.NullParameter.Step]
+Description = "Step Is Empty"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InvalidParameter.RetraceDuration]
+Description = "Retrace Duration Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InvalidParameter.ScheduleExpression]
+Description = "Schedule Expression Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InvalidParameter.ScheduleType]
+Description = "Schedule Type Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InvalidParameter.Step]
+Description = "Step Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InvalidParameter.ObjectiveConfig]
+Description = "Objective Config Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InvalidParameter.Objective]
+Description = "Objective Is Invalid，Must Greater Than 0"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InvalidParameter.Period]
+Description = "Period Is Invalid，Must Greater Than 0"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InvalidParameter.ObjectiveUnit]
+Description = "Objective Unit Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.CountExceeded.ComprehensiveMetricModelsTotal]
+Description = "Number of Comprehensive Metric Models Exceed 10"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.CountExceeded.AdditionalMetricModelsTotal]
+Description = "Number of Additional Metric Models Exceed 5"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.CountExceeded.StatusTotal]
+Description = "Number of Status Exceed 10"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.AssociateMetricModelsUnit.Different]
+Description = "Associate Metric Models Unit Are Different"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InvalidParameter.ComprehensiveWeight]
+Description = "Comprehensive Weight Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InvalidParameter.StatusRanges]
+Description = "Status Ranges Is Invalid"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.Duplicated.TaskStep]
+Description = "Same Step Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.Duplicated.ObjectiveModelName]
+Description = "Same Objective Model Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.ModelIDExisted]
+Description = "Model ID Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.ModelNameExisted]
+Description = "Model Name Existed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.LengthExceeded.ModelName]
+Description = "The Length of Model Name Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.LengthExceeded.TaskComment]
+Description = "The Length of Task Comment Out of Limit"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.UnsupportObjectiveType]
+Description = "Unsupport Objective Type"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.ObjectiveModelNotFound]
+Description = "The Objective Model Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.MetricModelNotFound]
+Description = "Associated Metric Model Does Not Exist"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InternalError.GetSimpleIndexBasesByTypesFailed]
+Description = "Get Simple Index Bases By Types Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InternalError]
+Description = "Internal Error"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InternalError.BeginTransactionFailed]
+Description = "Begin Transaction Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InternalError.CheckModelIfExistFailed]
+Description = "Failed to Check If The Metric Model Name Exists"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InternalError.GenerateIDFailed]
+Description = "Generate Distributed ID Failed"
+Solution = "Please try again. If the error occurs again, please submit the work order or contact technical support."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InternalError.GetMetricTasksByModelIDsFailed]
+Description = "Get Tasks By Model IDs Failed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
+
+[DataModel.ObjectiveModel.InternalError.GetObjectiveModelsByModelIDsFailed]
+Description = "Get Objective Models By ModelIDs Failed"
+Solution = "Please check whether the parameter is correct."
+ErrorLink = "None"
