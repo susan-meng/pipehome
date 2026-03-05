@@ -1,90 +1,162 @@
+# Vega 数据平台 API 配置
+
+# ===== 数据连接服务 API =====
 - name: 获取数据源列表
   url: /api/data-connection/v1/datasource/assignable-catalog
   method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
 - name: 查询数据源列表
   url: /api/data-connection/v1/datasource
   method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
 - name: 查询数据源详情
   url: /api/data-connection/v1/datasource/${id}
   method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
 - name: 新增数据源
   url: /api/data-connection/v1/datasource
   method: POST
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
 - name: 更新数据源
   url: /api/data-connection/v1/datasource/${id}
   method: PUT
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
 - name: 删除数据源
   url: /api/data-connection/v1/datasource/${id}
   method: DELETE
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
 - name: 测试数据源连接
   url: /api/data-connection/v1/datasource/test
   method: POST
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
 - name: 查询所有支持数据源
   url: /api/data-connection/v1/datasource/connectors
   method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
-- name: 查询数据源列表（内部）
-  url: /api/internal/data-connection/v1/datasource
-  method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
-- name: 查询数据源详情（内部）
-  url: /api/internal/data-connection/v1/datasource/${id}
-  method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
 - name: 元数据扫描
   url: /api/data-connection/v1/metadata/scan
   method: POST
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
 - name: 元数据批量扫描
   url: /api/data-connection/v1/metadata/scan/batch
   method: POST
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
-- name: 元数据扫描重试
-  url: /api/data-connection/v1/metadata/scan/retry
-  method: POST
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
 - name: 查询扫描任务列表
   url: /api/data-connection/v1/metadata/scan
   method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
-- name: 查看指定任务状态
-  url: /api/data-connection/v1/metadata/scan/${id}
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+# ===== 数据模型服务 API =====
+- name: 创建数据模型
+  url: /api/mdl-data-model/v1/data-views
+  method: POST
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 查询数据模型列表
+  url: /api/mdl-data-model/v1/data-views
   method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
-- name: 查看指定任务结果
-  url: /api/data-connection/v1/metadata/scan/info/${id}
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 查询数据模型详情
+  url: /api/mdl-data-model/v1/data-views/${id}
   method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
-- name: 查询指定数据源下表信息
-  url: /api/data-connection/v1/metadata/data-source/${id}
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 更新数据模型
+  url: /api/mdl-data-model/v1/data-views/${id}
+  method: PUT
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 删除数据模型
+  url: /api/mdl-data-model/v1/data-views/${id}
+  method: DELETE
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 创建事件模型
+  url: /api/mdl-data-model/v1/event-models
+  method: POST
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 查询事件模型列表
+  url: /api/mdl-data-model/v1/event-models
   method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
-- name: 查询指定表下字段信息
-  url: /api/data-connection/v1/metadata/table/${id}
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 创建指标模型
+  url: /api/mdl-data-model/v1/metric-models
+  method: POST
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 查询指标模型列表
+  url: /api/mdl-data-model/v1/metric-models
   method: GET
-  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\
-    \n}"
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+# ===== 统一查询服务 API =====
+- name: DSL查询
+  url: /api/mdl-uniquery/v1/dsl/query
+  method: POST
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: SQL查询
+  url: /api/mdl-uniquery/v1/sql/query
+  method: POST
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: PromQL查询
+  url: /api/mdl-uniquery/v1/promql/query
+  method: POST
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 数据检索
+  url: /api/mdl-uniquery/v1/search
+  method: POST
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+# ===== 后端管理服务 API =====
+- name: 查询目录列表
+  url: /api/vega-backend/v1/catalogs
+  method: GET
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 创建目录
+  url: /api/vega-backend/v1/catalogs
+  method: POST
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 查询资源列表
+  url: /api/vega-backend/v1/resources
+  method: GET
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 创建资源
+  url: /api/vega-backend/v1/resources
+  method: POST
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+# ===== 网关服务 API =====
+- name: 网关健康检查
+  url: /api/vega-gateway/health
+  method: GET
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+- name: 查询网关路由
+  url: /api/vega-gateway/v1/routes
+  method: GET
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
+
+# ===== 高级网关 API =====
+- name: 高级数据获取
+  url: /api/vega-gateway-pro/v1/fetch
+  method: POST
+  headers: "{\n \"Content-Type\": \"application/json\",\n \"Accept\": \"application/json\"\n}"
