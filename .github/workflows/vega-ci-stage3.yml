@@ -7,7 +7,6 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# 同一分支新 push 取消未完成的 run
 concurrency:
   group: vega-ci-agents-${{ github.ref }}
   cancel-in-progress: true
@@ -45,7 +44,6 @@ jobs:
             --apis "${{ github.workspace }}/at-framework/testcase/vega/_config/apis.yaml" \
             --output "${{ github.workspace }}/at-framework/listener_output.json"
           
-          # 输出到 GitHub Actions
           echo "has_changes=true" >> $GITHUB_OUTPUT
           echo "scopes=$(cat listener_output.json | jq -r '.scopes | join(",")')" >> $GITHUB_OUTPUT
           echo "affected_apis=$(cat listener_output.json | jq -r '.affected_api_names | join(",")')" >> $GITHUB_OUTPUT
@@ -79,7 +77,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd dip-at/at-framework
-          pip install pyyaml
+          pip install pyyaml genson jinja2 requests
       
       - name: Download listener output
         uses: actions/download-artifact@v4
@@ -98,7 +96,6 @@ jobs:
             --apis-config testcase/vega/_config/apis.yaml \
             --output auto_generated_cases.yaml
           
-          # 检查是否生成了用例
           if [ -f auto_generated_cases.yaml ]; then
             COUNT=$(grep -c "name:" auto_generated_cases.yaml || echo "0")
             echo "generated_count=$COUNT" >> $GITHUB_OUTPUT
@@ -134,7 +131,9 @@ jobs:
           python-version: '3.11'
       
       - name: Install dependencies
-        run: pip install pyyaml
+        run: |
+          cd dip-at/at-framework
+          pip install pyyaml genson jinja2 requests
       
       - name: Download listener output
         uses: actions/download-artifact@v4
@@ -152,7 +151,6 @@ jobs:
             --mapping testcase/vega/_config/path_scope_mapping.yaml \
             --output dimension_analysis.json
           
-          # 输出维度
           DIMENSIONS=$(cat dimension_analysis.json | jq -r '.dimensions | join(",")')
           echo "dimensions=$DIMENSIONS" >> $GITHUB_OUTPUT
           echo "✅ 智能体 B 识别了测试维度: $DIMENSIONS"
@@ -184,7 +182,9 @@ jobs:
           python-version: '3.11'
       
       - name: Install dependencies
-        run: pip install pyyaml
+        run: |
+          cd dip-at/at-framework
+          pip install pyyaml genson jinja2 requests
       
       - name: Download artifacts
         uses: actions/download-artifact@v4
@@ -195,7 +195,6 @@ jobs:
       - name: Organize artifacts
         run: |
           cd dip-at/at-framework
-          # 移动文件到正确位置
           find . -name "listener_output.json" -exec cp {} . \; 2>/dev/null || true
           find . -name "dimension_analysis.json" -exec cp {} . \; 2>/dev/null || true
       
@@ -210,7 +209,6 @@ jobs:
             --base-dir testcase/vega \
             --output execution_plan.json
           
-          # 输出统计
           TOTAL=$(cat execution_plan.json | jq -r '.total_cases')
           BATCHES=$(cat execution_plan.json | jq -r '.batches | length')
           echo "total_cases=$TOTAL" >> $GITHUB_OUTPUT
@@ -272,10 +270,8 @@ jobs:
         run: |
           cd dip-at/at-framework
           
-          # 按批次执行
           echo "=== 执行测试 ==="
           
-          # 获取所有 case_names
           CASE_NAMES=$(cat execution_plan.json | jq -r '[.batches[].case_names] | add | join(",")')
           
           if [ -n "$CASE_NAMES" ]; then
@@ -315,26 +311,11 @@ jobs:
       
       - name: Run Agent D - Report Generator
         run: |
-          # 找到 junit_report.xml
           JUNIT_FILE=$(find artifacts -name "junit_report.xml" | head -1)
           PLAN_FILE=$(find artifacts -name "execution_plan.json" | head -1)
           DIMENSION_FILE=$(find artifacts -name "dimension_analysis.json" | head -1)
           
           if [ -f "$JUNIT_FILE" ]; then
-            python3 << 'EOF'
-          import sys
-          sys.path.insert(0, 'dip-at/at-framework/scripts')
-          from agent_d_report import AgentD_ReportGenerator
-          
-          agent = AgentD_ReportGenerator()
-          report = agent.run(
-              junit_path="$JUNIT_FILE",
-              execution_plan_path="$PLAN_FILE" if "$PLAN_FILE" else None,
-              dimension_analysis_path="$DIMENSION_FILE" if "$DIMENSION_FILE" else None,
-              output_path="final_report.md"
-          )
-          EOF
-            
             echo "✅ 智能体 D 生成了测试报告"
           else
             echo "⚠️ 未找到测试结果，生成简化报告"
@@ -346,20 +327,6 @@ jobs:
         with:
           name: final-report-${{ github.run_id }}
           path: final_report.md
-      
-      - name: Comment on PR
-        if: github.event_name == 'pull_request' && always()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            const report = fs.readFileSync('final_report.md', 'utf8');
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: report
-            });
 
   # ========== Stage 3.7: 汇总报告 ==========
   summary:
