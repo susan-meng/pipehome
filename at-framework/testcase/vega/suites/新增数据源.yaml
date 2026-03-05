@@ -788,3 +788,17 @@ cases:
   code_check: '400'
   resp_schema: ''
   resp_check: ''
+- name: 新增数据源_回归测试_返回成功
+  url: 新增数据源
+  prev_case: ''
+  path_params: ''
+  query_params: ''
+  header_params: ''
+  body_params: ''
+  form_params: ''
+  resp_values: ''
+  code_check: '200'
+  resp_check: ''
+  resp_schema: ''
+  tags:
+  - regression

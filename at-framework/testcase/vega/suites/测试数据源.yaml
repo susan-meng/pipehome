@@ -1,7 +1,9 @@
 feature: 接口参数校验
 story: 测试数据源
 switch: y
-tags: [regression, data-connection]
+tags:
+- regression
+- data-connection
 cases:
 - name: 查询数据源类型清单
   url: 查询所有支持数据源
@@ -328,3 +330,17 @@ cases:
   code_check: '400'
   resp_schema: ''
   resp_check: ''
+- name: 测试数据源连接_回归测试_返回成功
+  url: 测试数据源连接
+  prev_case: ''
+  path_params: ''
+  query_params: ''
+  header_params: ''
+  body_params: ''
+  form_params: ''
+  resp_values: ''
+  code_check: '200'
+  resp_check: ''
+  resp_schema: ''
+  tags:
+  - regression
