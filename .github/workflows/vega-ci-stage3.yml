@@ -40,9 +40,9 @@ jobs:
         run: |
           cd at-framework
           python scripts/commit_listener.py \
-            --repo-path .. \
-            --mapping testcase/vega/_config/path_scope_mapping.yaml \
-            --apis testcase/vega/_config/apis.yaml \
+            --repo-path "${{ github.workspace }}" \
+            --mapping "${{ github.workspace }}/at-framework/testcase/vega/_config/path_scope_mapping.yaml" \
+            --apis "${{ github.workspace }}/at-framework/testcase/vega/_config/apis.yaml" \
             --output listener_output.json
           
           # 输出到 GitHub Actions
