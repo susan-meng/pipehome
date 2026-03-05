@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Temporary files
+*.log
+*.tmp
+listener_output*.json
+test_listener_output.json
+
+# Archives
+*.tar.gz
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test outputs
+report/
+auto_generated_cases.yaml
+test_generated_cases.yaml
